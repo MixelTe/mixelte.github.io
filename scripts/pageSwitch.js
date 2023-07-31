@@ -16,6 +16,7 @@ const elements = pages.map(id => ({
 	state: States.normal,
 	size: NormalSize,
 	pos: { x: 0, y: 0 },
+	markerSize: { w: 130, h: 130 },
 }));
 
 elements.forEach(el =>
@@ -55,8 +56,9 @@ function updateClip()
 	{
 		// const { x, y } = el.marker.getBoundingClientRect();
 		const { x, y } = el.pos;
+		const { w, h } = el.markerSize;
 		const screenSize = Math.max(window.innerWidth, window.innerHeight);
-		el.page.style.clipPath = `circle(${el.size}px at ${x + 65 + (window.innerWidth - 800) / 2}px ${y + 65}px)`;
+		el.page.style.clipPath = `circle(${el.size}px at ${x + w / 2 + (window.innerWidth - 800) / 2}px ${y + h / 2}px)`;
 		// el.page.style.clipPath = `circle(90px at ${x + 65 + (window.innerWidth - 800) / 2}px ${y + 65}px)`;
 		if (el.state == States.hover)
 		{
