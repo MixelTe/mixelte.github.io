@@ -19,6 +19,12 @@ body {
 	cursor: pointer;
 }
 
+@media screen and (max-width: 800px) {
+	.title {
+		margin-block: 0.5em;
+	}
+}
+
 .page {
 	position: fixed;
 	height: 100dvh;
@@ -68,7 +74,6 @@ body {
 	user-select: none;
 	cursor: pointer;
 	--r: 50%;
-	/* animation: groupsAnim 3s infinite alternate; */
 }
 
 .page-games .pageMarker {
@@ -91,13 +96,4 @@ body {
 }
 .open .pageMarker > div {
 	scale: 0;
-}
-
-@keyframes groupsAnim {
-	0% {
-		left: 5%;
-	}
-	100% {
-		left: 85%;
-	}
 }
