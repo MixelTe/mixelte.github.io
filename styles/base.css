@@ -12,6 +12,9 @@ body {
 	margin-block: 1em;
 	font-family: "PT Sans Caption", Arial, Helvetica, sans-serif;
 }
+.title > div {
+	padding: 0.5em;
+}
 .title img {
 	position: absolute;
     left: 0.5em;

@@ -56,8 +56,8 @@ function updateClip()
 		// const { x, y } = el.marker.getBoundingClientRect();
 		const { x, y } = el.pos;
 		const screenSize = Math.max(window.innerWidth, window.innerHeight);
-		// el.page.style.clipPath = `circle(${el.size}px at ${x + 65 + (window.innerWidth - 800) / 2}px ${y + 65}px)`;
-		el.page.style.clipPath = `circle(90px at ${x + 65 + (window.innerWidth - 800) / 2}px ${y + 65}px)`;
+		el.page.style.clipPath = `circle(${el.size}px at ${x + 65 + (window.innerWidth - 800) / 2}px ${y + 65}px)`;
+		// el.page.style.clipPath = `circle(90px at ${x + 65 + (window.innerWidth - 800) / 2}px ${y + 65}px)`;
 		if (el.state == States.hover)
 		{
 			el.size += 5;

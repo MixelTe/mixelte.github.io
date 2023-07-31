@@ -51,20 +51,20 @@ function createAnim()
 		{ x: r + (w - r * 2) / 2, y: top + r * 4.5 },
 		{ x: r + (w - r * 2) / 2 + r * 2, y: top + r * 4.5 },
 	]
-	circles.forEach((c, i) =>
-	{
-		const el = document.createElement("div");
-		el.style.position = "absolute";
-		el.innerText = i;
-		el.style.textAlign = "center";
-		el.style.top = `${c.y - r}px`;
-		el.style.left = `${c.x - r}px`;
-		el.style.width = `${r * 2}px`;
-		el.style.height = `${r * 2}px`;
-		el.style.borderRadius = "50%";
-		el.style.border = "1px solid black";
-		document.querySelector(".content").appendChild(el);
-	})
+	// circles.forEach((c, i) =>
+	// {
+	// 	const el = document.createElement("div");
+	// 	el.style.position = "absolute";
+	// 	el.innerText = i;
+	// 	el.style.textAlign = "center";
+	// 	el.style.top = `${c.y - r}px`;
+	// 	el.style.left = `${c.x - r}px`;
+	// 	el.style.width = `${r * 2}px`;
+	// 	el.style.height = `${r * 2}px`;
+	// 	el.style.borderRadius = "50%";
+	// 	el.style.border = "1px solid black";
+	// 	document.querySelector(".content").appendChild(el);
+	// })
 
 	const animation = [
 		arc(circles[5], 240, -120, r),
