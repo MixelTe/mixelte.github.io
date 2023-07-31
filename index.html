@@ -4,12 +4,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans|PT Sans Caption|PT Mono">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles/card.css">
+	<link rel="stylesheet" href="styles/base.css">
 	<title>Mixel Te - Index</title>
+	<script src="./scripts/pageSwitch.js" defer></script>
 </head>
 <body>
-	<div class="content">
-		<h1><div>Welcome to mixelte.github.io!</div><div></div></h1>
+	<div class="page page-index">
+		<div class="content">
+			<h1 class="title card"><div>Welcome to mixelte.github.io!</div><div></div></h1>
+		</div>
+	</div>
+	<div class="page page-games" id="page_games">
+		<div class="content">
+			<h1 class="title card"><div><img id="back_games" src="./imgs/arrow_back.png" alt="Back">Games</div><div></div></h1>
+			<div class="pageMarker card" id="pageMarker_games"><div>Games</div><div></div></div>
+		</div>
+	</div>
+	<div class="page page-utils" id="page_utils">
+		<div class="content">
+			<h1 class="title card"><div><img id="back_utils" src="./imgs/arrow_back.png" alt="Back">Utils</div><div></div></h1>
+			<div class="pageMarker card" id="pageMarker_utils"><div>Utils</div><div></div></div>
+		</div>
+	</div>
+	<div class="page page-other" id="page_other">
+		<div class="content">
+			<h1 class="title card"><div><img id="back_other" src="./imgs/arrow_back.png" alt="Back">Other</div><div></div></h1>
+			<div class="pageMarker card" id="pageMarker_other"><div>Other</div><div></div></div>
+		</div>
 	</div>
 </body>
 </html>

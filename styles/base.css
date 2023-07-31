@@ -1,0 +1,103 @@
+body {
+	height: 100dvh;
+	width: 100%;
+	margin: 0;
+	display: flex;
+	font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+.title {
+	position: relative;
+	font-size: 3rem;
+	margin-block: 1em;
+	font-family: "PT Sans Caption", Arial, Helvetica, sans-serif;
+}
+.title img {
+	position: absolute;
+    left: 0.5em;
+    width: 1em;
+	cursor: pointer;
+}
+
+.page {
+	position: fixed;
+	height: 100dvh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background:
+		radial-gradient(at 35% 95%, rgba(0, 249, 255, 0.3) 0%, transparent 26%),
+		radial-gradient(at 90% 60%, rgba(61, 255, 56, 0.22) 0%, transparent 26%),
+		radial-gradient(at 10% 10%, rgba(56, 125, 255, 0.32) 0%, rgba(0, 0, 0, 0) 33%),
+		linear-gradient(253deg, #cefff6 0%, #d6f2ff 100%);
+}
+.page-index {
+	clip-path: none;
+}
+.page-games {
+	background: radial-gradient(at 35% 95%, rgba(255,128,0,0.3) 0%, transparent 26%),
+            radial-gradient(at 90% 60%, rgba(160,56,255,0.22) 0%, transparent 26%),
+            radial-gradient(at 10% 10%, rgba(255,0,0,0.32) 0%, transparent 33%),
+            linear-gradient(90deg, #ffface 0%, #ffddd6 100%);
+}
+.page-utils {
+	background: radial-gradient(at 35% 95%, rgba(0,255,100,0.3) 0%, transparent 26%),
+            radial-gradient(at 90% 60%, rgba(12,218,0,0.24) 0%, transparent 26%),
+            radial-gradient(at 10% 10%, rgba(0,249,255,0.32) 0%, transparent 33%),
+            linear-gradient(90deg, #d2ffce 0%, #f4ffb0 100%);
+}
+.page-other {
+	background: radial-gradient(at 35% 95%, rgba(255,71,155,0.3) 0%, transparent 26%),
+            radial-gradient(at 90% 60%, rgba(255,219,37,0.24) 0%, transparent 26%),
+            radial-gradient(at 10% 10%, rgba(255,0,224,0.32) 0%, transparent 33%),
+            linear-gradient(90deg, #eeceff 0%, #ffb0b0 100%);
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+}
+
+.pageMarker {
+	position: absolute;
+	width: 130px;
+	height: 130px;
+	font-size: 2.5rem;
+	font-weight: bold;
+	user-select: none;
+	cursor: pointer;
+	--r: 50%;
+	/* animation: groupsAnim 3s infinite alternate; */
+}
+
+.page-games .pageMarker {
+	top: 300px;
+	left: 5%;
+}
+
+.page-utils .pageMarker {
+	top: 400px;
+	left: 65%;
+}
+
+.page-other .pageMarker {
+	top: 500px;
+	left: 30%;
+}
+
+.pageMarker > div {
+	transition: scale 250ms;
+}
+.open .pageMarker > div {
+	scale: 0;
+}
+
+@keyframes groupsAnim {
+	0% {
+		left: 5%;
+	}
+	100% {
+		left: 85%;
+	}
+}
