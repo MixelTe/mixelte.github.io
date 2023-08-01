@@ -9,34 +9,47 @@ elements.forEach((el, i) => el.movement = {
 const Speed = 15;
 // const Speed = 0;
 const animation = createAnim();
+const page_index = document.getElementById("page_index");
 
 animate();
 function animate()
 {
 	const disableAnim = window.innerWidth < 800;
-	elements.forEach((el, i) =>
+	if (isOpen)
 	{
-		if (disableAnim)
+		const open = elements.find(el => el.state == States.open);
+		page_index.scrollTop = open.page.scrollTop;
+	}
+	else
+		elements.forEach((el, i) =>
 		{
-			if (i == 0)
-				el.marker.style.top = "260px";
-			else if (i == 1)
-				el.marker.style.top = "530px";
-			else if (i == 2)
-				el.marker.style.top = "340px";
-			const step = window.innerWidth / 8;
-			el.marker.style.left = `${step * i * 2 + step}px`;
-			return;
-		}
-		let speed = Speed;
-		if (i != 2) speed *= (2 + 1 / 1.5) / 6;
-		if (i == 2) speed *= -1;
-		el.pos = animation(el.movement, speed);
-		el.pos.x -= el.markerSize.w / 2;
-		el.pos.y -= el.markerSize.h / 2;
-		el.marker.style.top = `${el.pos.y}px`;
-		el.marker.style.left = `${el.pos.x}px`;
-	});
+			if (disableAnim)
+			{
+				if (i == 0)
+					el.pos.y = 280;
+				else if (i == 1)
+					el.pos.y = 650;
+				else if (i == 2)
+					el.pos.y = 420;
+				const step = window.innerWidth / 8;
+				el.pos.x = step * i * 2 + step;
+			}
+			else
+			{
+				let speed = Speed;
+				if (i != 2) speed *= (2 + 1 / 1.5) / 6;
+				if (i == 2) speed *= -1;
+				el.pos = animation(el.movement, speed);
+				el.pos.x -= el.markerSize.w / 2;
+				el.pos.y -= el.markerSize.h / 2;
+			}
+
+			el.pos.y -= page_index.scrollTop;
+			el.page.scrollTop = page_index.scrollTop;
+
+			el.marker.style.top = `${el.pos.y + page_index.scrollTop}px`;
+			el.marker.style.left = `${el.pos.x}px`;
+		});
 	requestAnimationFrame(animate);
 }
 

@@ -31,6 +31,8 @@ body {
 .page {
 	position: fixed;
 	height: 100dvh;
+	overflow-y: hidden;
+	overflow-x: hidden;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -40,8 +42,12 @@ body {
 		radial-gradient(at 10% 10%, rgba(56, 125, 255, 0.32) 0%, rgba(0, 0, 0, 0) 33%),
 		linear-gradient(253deg, #cefff6 0%, #d6f2ff 100%);
 }
+.open {
+	overflow-y: overlay;
+}
 .page-index {
 	clip-path: none;
+	overflow-y: overlay;
 }
 .page-games {
 	background: radial-gradient(at 35% 95%, rgba(255,128,0,0.3) 0%, transparent 26%),
@@ -64,6 +70,7 @@ body {
 
 .content {
 	position: relative;
+	min-height: 850px;
 	width: 100%;
 	max-width: 800px;
 }
