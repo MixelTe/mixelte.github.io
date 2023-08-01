@@ -2,11 +2,11 @@ elements.forEach((el, i) => el.movement = {
 	i,
 	start: {
 		0: 0,
-		1: 300,
-		2: 360 + 360 + 30,
+		1: 90,
+		2: 360 + 360 + 180,
 	}[i]
 });
-const Speed = 100;
+const Speed = 15;
 // const Speed = 0;
 const animation = createAnim();
 
@@ -30,6 +30,7 @@ function animate()
 		}
 		let speed = Speed;
 		if (i != 2) speed *= (2 + 1 / 1.5) / 6;
+		if (i == 2) speed *= -1;
 		el.pos = animation(el.movement, speed);
 		el.pos.x -= el.markerSize.w / 2;
 		el.pos.y -= el.markerSize.h / 2;
@@ -46,35 +47,38 @@ function createAnim()
 		return { x, y, start, end, radius, speed };
 	}
 
-	const r = 100;
+	const r = 110;
 	const w = 800;
-	const top = 200;
+	const top = 150;
 	const circle = (x, y) => ({ x: (w - r * 6) / 2 + r * 2 * x + r, y: top + r * 2 * y + r });
-	const circles = [
-		circle(0, 0),
-		circle(0, 1),
-		circle(0, 2),
-		circle(1, 0),
-		circle(1, 1),
-		circle(1, 2),
-		circle(2, 0),
-		circle(2, 1),
-		circle(2, 2),
-	]
-	circles.forEach((c, i) =>
+	function drawCircles()
 	{
-		const el = document.createElement("div");
-		el.style.position = "absolute";
-		// el.innerText = i;
-		// el.style.textAlign = "center";
-		el.style.top = `${c.y - r}px`;
-		el.style.left = `${c.x - r}px`;
-		el.style.width = `${r * 2}px`;
-		el.style.height = `${r * 2}px`;
-		el.style.borderRadius = "50%";
-		el.style.border = "1px solid black";
-		document.querySelector(".content").appendChild(el);
-	})
+		[
+			circle(0, 0),
+			circle(0, 1),
+			circle(0, 2),
+			circle(1, 0),
+			circle(1, 1),
+			circle(1, 2),
+			circle(2, 0),
+			circle(2, 1),
+			circle(2, 2),
+		].forEach((c, i) =>
+		{
+			const el = document.createElement("div");
+			el.style.position = "absolute";
+			// el.innerText = i;
+			// el.style.textAlign = "center";
+			el.style.top = `${c.y - r}px`;
+			el.style.left = `${c.x - r}px`;
+			el.style.width = `${r * 2}px`;
+			el.style.height = `${r * 2}px`;
+			el.style.borderRadius = "50%";
+			el.style.border = "1px solid black";
+			document.querySelector(".content").appendChild(el);
+		});
+	}
+	// drawCircles();
 
 	const animations = [
 		[
@@ -123,7 +127,7 @@ function createAnim()
 					p -= Math.abs(anim.start - anim.end);
 					break;
 				}
-				i++;
+				i = (i + 1) % animation.length;
 			}
 			state.step = i;
 			// state.pos = (anim.start / 180 * Math.PI) + ((p - state.start) * (anim.start < anim.end ? 1 : -1)) / (2 * anim.radius * Math.PI);
@@ -135,26 +139,37 @@ function createAnim()
 		const x = Math.cos(pos) * anim.radius + anim.x;
 		const y = Math.sin(pos) * anim.radius + anim.y;
 
+		let start = anim.start;
+		let end = anim.end;
+		let toNext = () =>
+		{
+			state.step += 1;
+			state.step %= animation.length;
+			state.pos = animation[state.step].start / 180 * Math.PI;
+		}
+		if (speed < 0)
+		{
+			[start, end] = [end, start];
+			speed *= -1;
+			toNext = () =>
+			{
+				state.step -= 1;
+				state.step = (state.step + animation.length) % animation.length;
+				state.pos = animation[state.step].end / 180 * Math.PI;
+			}
+		}
 		const speedCur = speed / (2 * anim.radius * Math.PI) * anim.speed;
-		if (anim.start < anim.end)
+		if (start < end)
 		{
 			state.pos = pos + speedCur;
-			if (state.pos >= anim.end / 180 * Math.PI)
-			{
-				state.step += 1;
-				state.step %= animation.length;
-				state.pos = animation[state.step].start / 180 * Math.PI;
-			}
+			if (state.pos >= end / 180 * Math.PI)
+				toNext();
 		}
 		else
 		{
 			state.pos = pos - speedCur;
-			if (state.pos <= anim.end / 180 * Math.PI)
-			{
-				state.step += 1;
-				state.step %= animation.length;
-				state.pos = animation[state.step].start / 180 * Math.PI;
-			}
+			if (state.pos <= end / 180 * Math.PI)
+				toNext();
 		}
 
 		return { x, y };
