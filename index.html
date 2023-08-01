@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans|PT Sans Caption|PT Mono">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pirata+One">
 	<link rel="stylesheet" href="styles/card.css">
 	<link rel="stylesheet" href="styles/base.css">
+	<link rel="stylesheet" href="styles/page_games.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<title>Mixel Te - Index</title>
 	<script src="./scripts/pageSwitch.js" defer></script>
@@ -19,20 +21,79 @@
 	</div>
 	<div class="page page-games" id="page_games">
 		<div class="content">
-			<h1 class="title card"><div><img id="back_games" src="./imgs/arrow_back.png" alt="Back">Games</div><div></div></h1>
-			<div class="pageMarker card" id="pageMarker_games"><div>Games</div><div></div></div>
+			<div class="pageMarker oldpaper" id="pageMarker_games">Games</div>
+			<h1 class="title oldpaper"><img id="back_games" src="./imgs/arrow_back.png" alt="Back">Games</h1>
+			<div class="_projects">
+				<div class="_switch">
+					<a href="#game1" class="oldpaper">The Legend <br> of Pirate</a>
+					<a href="#game2" class="oldpaper">Hell Run</a>
+					<a href="#game3" class="oldpaper">Vertik</a>
+					<a href="#game4" class="oldpaper">Mad Maze</a>
+					<a href="#game5" class="oldpaper">Game of Life</a>
+				</div>
+				<div class="oldpaper">
+					<div class="_card" id="game1">
+						<div class="_header">The Legend of Pirate</div>
+						<div class="_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem suscipit iste sunt hic molestias sint mollitia tenetur, ipsam, nemo, natus libero magnam rerum id deleniti quos voluptatibus fugit quibusdam neque!</div>
+					</div>
+					<div class="_card" id="game2">
+						<div class="_header">Hell Run</div>
+						<div class="_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem suscipit iste sunt hic molestias sint mollitia tenetur, ipsam, nemo, natus libero magnam rerum id deleniti quos voluptatibus fugit quibusdam neque!</div>
+					</div>
+					<div class="_card" id="game3">
+						<div class="_header">Vertik</div>
+						<div class="_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem suscipit iste sunt hic molestias sint mollitia tenetur, ipsam, nemo, natus libero magnam rerum id deleniti quos voluptatibus fugit quibusdam neque!</div>
+					</div>
+					<div class="_card" id="game4">
+						<div class="_header">Mad Maze</div>
+						<div class="_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem suscipit iste sunt hic molestias sint mollitia tenetur, ipsam, nemo, natus libero magnam rerum id deleniti quos voluptatibus fugit quibusdam neque!</div>
+					</div>
+					<div class="_card" id="game5">
+						<div class="_header">Game of Life</div>
+						<div class="_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem suscipit iste sunt hic molestias sint mollitia tenetur, ipsam, nemo, natus libero magnam rerum id deleniti quos voluptatibus fugit quibusdam neque!</div>
+					</div>
+				</div>
+				<div class="_folder" id="getdate">
+					<div>The Best</div>
+					<div>Collection of the best games</div>
+					<div></div>
+					<div></div>
+					<div>\_(0_0)_/</div>
+					<div><span>&copy;</span> Mixel Te, 2023</div>
+				</div>
+				<script>
+					{
+						const d = new Date();
+						const toTwo = v => v < 10 ? `0${v}` : `${v}`;
+						document.getElementById("getdate").style.setProperty('--date', `"${toTwo(d.getDate())} / ${toTwo(d.getMonth() + 1)} / ${d.getFullYear()}   || In Progress ||"`);
+					}
+				</script>
+			</div>
+			<!-- <ul>
+				<li>The Legend of Pirate</li>
+				<li>Адский Забег</li>
+				<li>Вертик</li>
+				<li>Сумашедший лабиринт</li>
+				<li>Game of Life</li>
+			</ul> -->
 		</div>
+		<svg style="display: none;">
+			<filter id="wavy2">
+				<feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1" />
+				<feDisplacementMap in="SourceGraphic" scale="20" />
+			</filter>
+		</svg>
 	</div>
 	<div class="page page-utils" id="page_utils">
 		<div class="content">
-			<h1 class="title card"><div><img id="back_utils" src="./imgs/arrow_back.png" alt="Back">Utils</div><div></div></h1>
 			<div class="pageMarker card" id="pageMarker_utils"><div>Utils</div><div></div></div>
+			<h1 class="title card"><div><img id="back_utils" src="./imgs/arrow_back.png" alt="Back">Utils</div><div></div></h1>
 		</div>
 	</div>
 	<div class="page page-other" id="page_other">
 		<div class="content">
-			<h1 class="title card"><div><img id="back_other" src="./imgs/arrow_back.png" alt="Back">Other</div><div></div></h1>
 			<div class="pageMarker card" id="pageMarker_other"><div>Other</div><div></div></div>
+			<h1 class="title card"><div><img id="back_other" src="./imgs/arrow_back.png" alt="Back">Other</div><div></div></h1>
 		</div>
 	</div>
 </body>

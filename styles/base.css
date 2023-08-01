@@ -9,7 +9,8 @@ body {
 .title {
 	position: relative;
 	font-size: 3rem;
-	margin-block: 1em;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
 	font-family: "PT Sans Caption", Arial, Helvetica, sans-serif;
 }
 .title > div {
@@ -18,6 +19,8 @@ body {
 .title img {
 	position: absolute;
     left: 0.5em;
+	top: 50%;
+	transform: translateY(-50%);
     width: 1em;
 	cursor: pointer;
 }
@@ -36,6 +39,7 @@ body {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	scrollbar-gutter: stable;
 	background:
 		radial-gradient(at 35% 95%, rgba(0, 249, 255, 0.3) 0%, transparent 26%),
 		radial-gradient(at 90% 60%, rgba(61, 255, 56, 0.22) 0%, transparent 26%),
@@ -43,17 +47,21 @@ body {
 		linear-gradient(253deg, #cefff6 0%, #d6f2ff 100%);
 }
 .open {
-	overflow-y: overlay;
+	overflow-y: scroll;
 }
 .page-index {
 	clip-path: none;
-	overflow-y: overlay;
+	overflow-y: auto;
 }
 .page-games {
-	background: radial-gradient(at 35% 95%, rgba(255,128,0,0.3) 0%, transparent 26%),
-            radial-gradient(at 90% 60%, rgba(160,56,255,0.22) 0%, transparent 26%),
-            radial-gradient(at 10% 10%, rgba(255,0,0,0.32) 0%, transparent 33%),
-            linear-gradient(90deg, #ffface 0%, #ffddd6 100%);
+	background-color: #00041e;
+	opacity: 1;
+	background-image:  linear-gradient(30deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(150deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(30deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(150deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(60deg, #004c4777 25%, transparent 22.5%, transparent 75%, #004c4777 75%, #004c4777), linear-gradient(60deg, #004c4777 25%, transparent 22.5%, transparent 75%, #004c4777 75%, #004c4777);
+	background-size: 80px 140px;
+	background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+.page-games .card {
+	--gradient: linear-gradient(45deg, #ffa400 0%, #ef3ff1 100%);
 }
 .page-utils {
 	background: radial-gradient(at 35% 95%, rgba(0,255,100,0.3) 0%, transparent 26%),
@@ -61,11 +69,17 @@ body {
             radial-gradient(at 10% 10%, rgba(0,249,255,0.32) 0%, transparent 33%),
             linear-gradient(90deg, #d2ffce 0%, #f4ffb0 100%);
 }
+.page-utils .card {
+	--gradient: linear-gradient(45deg, #ffe600 0%, #00cd9a 100%);
+}
 .page-other {
 	background: radial-gradient(at 35% 95%, rgba(255,71,155,0.3) 0%, transparent 26%),
             radial-gradient(at 90% 60%, rgba(255,219,37,0.24) 0%, transparent 26%),
             radial-gradient(at 10% 10%, rgba(255,0,224,0.32) 0%, transparent 33%),
             linear-gradient(90deg, #eeceff 0%, #ffb0b0 100%);
+}
+.page-other .card {
+	--gradient: linear-gradient(45deg, #ffbb00 0%, #f100ff 100%);
 }
 
 .content {
@@ -104,6 +118,27 @@ body {
 .pageMarker > div {
 	transition: scale 250ms;
 }
+.open .pageMarker {
+	pointer-events: none;
+}
 .open .pageMarker > div {
 	scale: 0;
+}
+
+
+.oldpaper {
+	--size: 125px;
+	--back: rgb(252, 233, 212);
+	position: relative;
+}
+.oldpaper::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	filter: url(#wavy2);
+    box-shadow: 2px 3px 20px black, 0 0 var(--size) #8f5922 inset;
+    background: #fffef0;
+    z-index: -1;
+	background: url(data:image/png;base64,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)
+				var(--back);
 }

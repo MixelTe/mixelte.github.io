@@ -3,6 +3,7 @@
 	border-radius: 0.55em;
 	display: flex;
 	--r: 0.5em;
+	--gradient: linear-gradient(45deg, #15c0fd 0%, #b329ff 100%);
 }
 .card div:first-child {
 	color: black;
@@ -42,7 +43,7 @@
 		content: "";
 		position: absolute;
 		inset: -5px;
-		background: linear-gradient(45deg, #15c0fd 0%, #b329ff 100%);
+		background: var(--gradient);
 		filter: blur(15px);
 		border-radius: var(--r);
 		opacity: 0.5;
