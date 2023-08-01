@@ -1,0 +1,51 @@
+@font-face {
+	font-family: "PT Sans";
+	src: url("PT_Sans/PTSans-Regular.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "PT Sans";
+	src: url("PT_Sans/PTSans-Italic.ttf") format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: "PT Sans";
+	src: url("PT_Sans/PTSans-Bold.ttf") format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "PT Sans";
+	src: url("PT_Sans/PTSans-BoldItalic.ttf") format('truetype');
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "PT Sans Caption";
+	src: url("PT_Sans_Caption/PTSansCaption-Regular.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "PT Sans Caption";
+	src: url("PT_Sans_Caption/PTSansCaption-Bold.ttf") format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Neucha";
+	src: url("Neucha/Neucha-Regular.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Pirata One";
+	src: url("Pirata_One/PirataOne-Regular.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
