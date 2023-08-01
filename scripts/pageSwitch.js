@@ -20,36 +20,57 @@ const elements = pages.map(id => ({
 	markerSize: { w: 130, h: 130 },
 }));
 
-elements.forEach(el =>
+elements.forEach((el, i) =>
 {
 	el.marker.addEventListener("mouseenter", () =>
 	{
-		el.statePrev = el.state;
 		if (el.state == States.normal)
 			el.state = States.hover;
 	});
 	el.marker.addEventListener("mouseleave", () =>
 	{
-		el.statePrev = el.state;
 		if (el.state == States.hover)
 			el.state = States.normal;
 	});
 	el.marker.addEventListener("click", () =>
 	{
-		el.statePrev = el.state;
 		el.state = States.open;
 		el.page.style.zIndex = "10";
 		el.page.classList.add("open");
 		isOpen = true;
+		if (history.replaceState)
+		{
+			var url = new URL(window.location.href);
+			url.searchParams.set("p", pages[i]);
+			window.history.replaceState(null, '', url.toString());
+		}
 	});
 	el.back.addEventListener("click", () =>
 	{
-		el.statePrev = el.state;
 		el.state = States.closing;
 		el.page.classList.remove("open");
 		isOpen = false;
+		if (history.replaceState)
+		{
+			var url = new URL(window.location.href);
+			url.searchParams.delete("p");
+			window.history.replaceState(null, '', url.toString());
+		}
 	});
 });
+
+const urlParams = new URLSearchParams(window.location.search);
+const page = urlParams.get("p");
+if (pages.includes(page))
+{
+	const openPage = elements[pages.indexOf(page)];
+	openPage.state = States.open;
+	openPage.page.style.zIndex = "10";
+	openPage.page.classList.add("open");
+	isOpen = true;
+	const screenSize = Math.max(window.innerWidth, window.innerHeight) * Math.SQRT2;
+	openPage.size = screenSize;
+}
 
 
 updateClip();
