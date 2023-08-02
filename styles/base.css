@@ -11,6 +11,15 @@ body {
 	font-family: "PT Sans", Arial, Helvetica, sans-serif;
 }
 
+a {
+	text-decoration: none;
+	text-decoration-skip-ink: none;
+	color: blue;
+}
+.link:hover {
+	text-decoration: underline;
+}
+
 .title {
 	position: relative;
 	font-size: 3rem;
