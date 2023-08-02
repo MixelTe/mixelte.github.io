@@ -5,6 +5,7 @@
 body {
 	height: 100dvh;
 	width: 100%;
+	min-width: 320px;
 	margin: 0;
 	display: flex;
 	font-family: "PT Sans", Arial, Helvetica, sans-serif;
@@ -44,6 +45,7 @@ body {
 	display: flex;
 	justify-content: center;
 	scrollbar-gutter: stable;
+	scroll-behavior: smooth;
 	background:
 		radial-gradient(at 35% 95%, rgba(0, 249, 255, 0.3) 0%, transparent 26%),
 		radial-gradient(at 90% 60%, rgba(61, 255, 56, 0.22) 0%, transparent 26%),

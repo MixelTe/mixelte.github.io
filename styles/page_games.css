@@ -24,6 +24,8 @@
 	font-family: Pirata One, "PT Sans", Arial, Helvetica, sans-serif;
 	color: var(--c);
 	letter-spacing: 0.15em;
+	margin-left: 0.5rem;
+	margin-right: 1rem;
 }
 
 .page-games ._projects {
@@ -64,6 +66,36 @@
 	opacity: 0.5;
 	color: #ffb700;
 	filter: blur(1px);
+}
+@media screen and (max-width: 650px) {
+	.page-games ._switch .oldpaper {
+		padding: 0.5em calc(100vw / 25);
+		padding-bottom: 2em;
+	}
+}
+@media screen and (max-width: 500px) {
+	.page-games ._projects {
+		padding: 0.5em;
+		padding-left: 0.2em;
+	}
+	.page-games ._switch {
+		flex-direction: column;
+		margin-bottom: -0.5em;
+	}
+	.page-games ._switch br {
+		display: none;
+	}
+	.page-games ._switch .oldpaper {
+		writing-mode: horizontal-tb;
+		padding: 0.5em 1em;
+		transform: none;
+		margin-top: -0.5em;
+		/* padding: 0.5em calc(100vw / 100); */
+	}
+	.page-games ._switch .oldpaper._gold::after {
+		top: -0.5rem;
+		right: 0.3rem;
+	}
 }
 
 .page-games ._projects > .oldpaper {
@@ -183,6 +215,20 @@
 	margin-bottom: 1em;
 }
 
+@media screen and (max-width: 600px) {
+	.page-games ._header {
+		flex-direction: column;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.page-games ._description {
+		flex-direction: column;
+	}
+	.page-games ._img {
+		align-self: center;
+	}
+}
+
 .page-games ._img {
 	position: relative;
 	height: 10em;
@@ -195,27 +241,35 @@
 	border-radius: 0.5em;
 	object-fit: cover;
 	filter: grayscale(0.2) sepia(0.2);
+
+	border: solid currentColor;
+	border-width: 3px 4px 3px 5px;
+	border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+	/* transform: rotate(2deg); */
+	filter: brightness(1.2);
+	box-sizing: border-box;
 }
 .page-games ._img::before {
 	content: "";
+	pointer-events: none;
 	position: absolute;
 	inset: 0;
 	border-radius: 0.5em;
 	z-index: 1;
 	background-image: var(--image-noise);
 	mix-blend-mode: multiply;
+	border: solid transparent;
+	border-width: 3px 4px 3px 5px;
+	border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+	/* transform: rotate(2deg); */
+	filter: brightness(1.2);
 }
 .page-games ._img::after {
-	content: "";
+	/* content: ""; */
+	pointer-events: none;
 	position: absolute;
 	inset: -4px;
 	z-index: 1;
-
-	border: solid currentColor;
-	border-width: 3px 4px 3px 5px;
-	border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
-	transform: rotate(2deg);
-	filter: brightness(1.2);
 }
 .page-games ._description p {
 	margin: 0;
