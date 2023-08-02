@@ -3,7 +3,8 @@ const pages = ["games", "utils", "other"];
 const States = {
 	hover: "on hover",
 	normal: "normal",
-	open: "to full screen",
+	opening: "to full screen",
+	open: "is full screen",
 	closing: "was open",
 }
 const NormalSize = 125;
@@ -34,7 +35,7 @@ elements.forEach((el, i) =>
 	});
 	el.marker.addEventListener("click", () =>
 	{
-		el.state = States.open;
+		el.state = States.opening;
 		el.page.style.zIndex = "10";
 		el.page.classList.add("open");
 		isOpen = true;
@@ -50,6 +51,7 @@ elements.forEach((el, i) =>
 		el.state = States.closing;
 		el.page.classList.remove("open");
 		isOpen = false;
+		document.body.classList.remove("pageOpened");
 		if (history.replaceState)
 		{
 			var url = new URL(window.location.href);
@@ -90,10 +92,20 @@ function updateClip()
 			el.size += 5;
 			el.size = Math.min(el.size, HoverSize);
 		}
-		else if (el.state == States.open)
+		else if (el.state == States.opening)
 		{
 			el.size += screenSize * 0.03;
 			el.size = Math.min(el.size, screenSize);
+			if (el.size == screenSize)
+			{
+				el.state = States.open;
+				document.body.classList.add("pageOpened");
+			}
+		}
+		else if (el.state == States.open)
+		{
+			el.page.style.clipPath = "none";
+			el.size = screenSize;
 		}
 		else if (el.state == States.closing)
 		{
@@ -110,6 +122,7 @@ function updateClip()
 			el.size -= 3;
 			el.size = Math.max(el.size, NormalSize);
 		}
+
 	});
 	requestAnimationFrame(updateClip);
 }

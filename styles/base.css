@@ -61,7 +61,11 @@ a {
 		radial-gradient(at 10% 10%, rgba(56, 125, 255, 0.32) 0%, rgba(0, 0, 0, 0) 33%),
 		linear-gradient(253deg, #cefff6 0%, #d6f2ff 100%);
 }
-.open {
+.pageOpened .page {
+	display: none;
+}
+.pageOpened .open {
+	display: flex;
 	overflow-y: scroll;
 }
 .page-index {

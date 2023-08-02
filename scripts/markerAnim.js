@@ -17,7 +17,7 @@ function animate()
 	const disableAnim = window.innerWidth < 800;
 	if (isOpen)
 	{
-		const open = elements.find(el => el.state == States.open);
+		const open = elements.find(el => el.state == States.open || el.state == States.opening);
 		page_index.scrollTop = open.page.scrollTop;
 	}
 	else
