@@ -38,6 +38,28 @@ a {
     width: 1em;
 	cursor: pointer;
 }
+.title button {
+	position: absolute;
+	font-size: 2rem;
+    right: 0.5em;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	padding: 0;
+}
+.title button::before {
+	content: "EN";
+}
+.lang-ru .title button::before {
+	content: "RU";
+}
+
+body:not(.lang-ru) .ru {
+	display: none;
+}
+.lang-ru .en {
+	display: none;
+}
 
 @media screen and (max-width: 800px) {
 	.title {

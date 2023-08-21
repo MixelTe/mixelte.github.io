@@ -11,6 +11,7 @@
 	<title>Mixel Te - Index</title>
 	<script src="./scripts/pageSwitch.js" defer></script>
 	<script src="./scripts/markerAnim.js" defer></script>
+	<script src="./scripts/langSwitch.js" defer></script>
 </head>
 <body>
 	<div class="page page-index" id="page_index">
@@ -21,7 +22,7 @@
 	<div class="page page-games" id="page_games">
 		<div class="content">
 			<div class="pageMarker oldpaper" id="pageMarker_games">Games</div>
-			<h1 class="title oldpaper"><img id="back_games" src="./imgs/arrow_back.png" alt="Back">Games</h1>
+			<h1 class="title oldpaper"><img id="back_games" src="./imgs/arrow_back.png" alt="Back">Games<button id="langSwitch"></button></h1>
 			<div class="_projects">
 				<div class="_switch">
 					<a href="#game1" class="oldpaper _gold">The Legend <br> of Pirate</a>
@@ -39,8 +40,10 @@
 						<div class="_description">
 							<div class="_img"><img src="./imgs/the-legend-of-pirate/icon.png" alt="Project logo" loading="lazy"></div>
 							<div>
-								<p>Игра про приключения пирата, вдохновлённая игрой The Legend of Zelda. Игроку предстоит исследовать мир, сражаться со множеством противников, выполнять квесты и искать клад.</p>
-								<p>Написана с использованием библиотеки PyGame. Поддерживает полное управление контроллером.</p>
+								<p class="en">A pirate adventure game inspired by The Legend of Zelda. The player will have to explore the world, fight with many opponents, complete quests and search for treasure.</p>
+								<p class="en">Written using the PyGame library. Supports full controller control.</p>
+								<p class="ru _nm">Игра про приключения пирата, вдохновлённая игрой The Legend of Zelda. Игроку предстоит исследовать мир, сражаться со множеством противников, выполнять квесты и искать клад.</p>
+								<p class="ru">Написана с использованием библиотеки PyGame. Поддерживает полное управление контроллером.</p>
 								<div class="_links">
 									<div>
 										<a href="https://mixelte.github.io/The-Legend-of-Pirate/" target="_blank" rel="noopener noreferrer">
@@ -57,22 +60,35 @@
 						<div class="_largeDescription">
 							<div class="_descriptionImg">
 								<div class="_img2"><img src="./imgs/the-legend-of-pirate/worlds.png" alt="Worlds" loading="lazy"></div>
-								<p>Игра позволяет окунуться в фантастический мир невероятных приключений.</p>
-								<p>В ней реализовано множество механик, позволяющих исследовать игровую вселенную. На пути у игрока встретится множество противников, каждый обладающий уникальным ИИ и анимациями.</p>
-								<p>Искателя приключений ждут незабываемые квесты, а так же поиск клада по карте сокровищ.</p>
-								<p>Игровой мир состоит из четырёх локаций с уникальными противниками.</p>
+								<p class="en _nm">The game allows you to dive into a fantastic world of incredible adventures.</p>
+								<p class="en">It implements a lot of mechanics that allow you to explore the game universe. The player will meet many opponents on his way, each having a unique AI and animations.</p>
+								<p class="en">Unforgettable quests are waiting for the adventurer, as well as the search for treasure on the treasure map.</p>
+								<p class="en">The game world consists of four locations with unique opponents.</p>
+								<p class="ru _nm">Игра позволяет окунуться в фантастический мир невероятных приключений.</p>
+								<p class="ru">В ней реализовано множество механик, позволяющих исследовать игровую вселенную. На пути у игрока встретится множество противников, каждый обладающий уникальным ИИ и анимациями.</p>
+								<p class="ru">Искателя приключений ждут незабываемые квесты, а так же поиск клада по карте сокровищ.</p>
+								<p class="ru">Игровой мир состоит из четырёх локаций с уникальными противниками.</p>
 							</div>
 							<div class="_br"></div>
 							<img class="_img3" src="./imgs/the-legend-of-pirate/animation.png" alt="Pirate" loading="lazy">
 							<div class="_br"></div>
 							<div class="_descriptionImg">
 								<div class="_img2 _img2-sq"><img src="./imgs/the-legend-of-pirate/dig.png" alt="Digging pirate" loading="lazy"></div>
-								<p>Главный герой - пират, потерпевший крушение.</p>
-								<p>У капитана осталась только лопата, с помощью которой он сражается и ищет клад.</p>
+								<p class="en _nm">The main character is a pirate who has been wrecked.</p>
+								<p class="en">The captain has only a shovel left, with which he fights and searches for treasure.</p>
+								<p class="ru _nm">Главный герой - пират, потерпевший крушение.</p>
+								<p class="ru">У капитана осталась только лопата, с помощью которой он сражается и ищет клад.</p>
 								<div class="_img2 _img2-sq _fl"><img src="./imgs/the-legend-of-pirate/trader.png" alt="Trader" loading="lazy"></div>
-								<p>Команда пирата не растерялась, и некоторые из неё организовали магазин на острове.</p>
-								<p>Весь проект создан с нуля: движок игры, ИИ, музыка при бое с босом, звуки.</p>
-								<p>
+								<p class="en">The pirate team was not confused, and some of them organized a store on the island.</p>
+								<p class="en">The whole project was created from scratch: game engine, AI, music when fighting with the boss, sounds.</p>
+								<p class="en">
+									A Typescript
+									<a class="link" href="https://mixelte.github.io/The-Legend-of-Pirate/worldEditor/" target="_blank" rel="noopener noreferrer">editor</a>
+									was written to create the game world.
+								</p>
+								<p class="ru">Команда пирата не растерялась, и некоторые из неё организовали магазин на острове.</p>
+								<p class="ru">Весь проект создан с нуля: движок игры, ИИ, музыка при бое с босом, звуки.</p>
+								<p class="ru">
 									Для создания игрового мира был написан
 									<a class="link" href="https://mixelte.github.io/The-Legend-of-Pirate/worldEditor/" target="_blank" rel="noopener noreferrer">редактор</a>
 									на Typescript.
@@ -89,9 +105,12 @@
 						<div class="_description">
 							<div class="_img"><img src="./imgs/HellRun/icon.png" alt="Project logo" loading="lazy"></div>
 							<div>
-								<p>Игра в жанре раннер. Опубликованна на платформе Яндекс Игры.</p>
-								<p>🎮 Игроку предстоит испытать свою ловкость и реакцию в бесконечном забеге.</p>
-								<p>🏆 Реализован лидерборд для соревновательного духа.</p>
+								<p class="en">A game in the genre of runner. Published on the platform Yandex Games.</p>
+								<p class="en">🎮 The player will have to test his agility and reaction in an endless race.</p>
+								<p class="en">🏆 Leaderboard is implemented for competitive spirit.</p>
+								<p class="ru _nm">Игра в жанре раннер. Опубликованна на платформе Яндекс Игры.</p>
+								<p class="ru">🎮 Игроку предстоит испытать свою ловкость и реакцию в бесконечном забеге.</p>
+								<p class="ru">🏆 Реализован лидерборд для соревновательного духа.</p>
 								<div class="_links">
 									<div>
 										<a href="https://yandex.ru/games/app/225629?from=githubio" target="_blank" rel="noopener noreferrer">
@@ -125,8 +144,10 @@
 						<div class="_description">
 							<div class="_img"><img src="./imgs/vertic.jpg" alt="Project logo" loading="lazy"></div>
 							<div>
-								<p>Простой платформер. В игре есть звуки, двигающиеся платформы, двери, открывающиеся рычагом, звёзды для сбора, противник.</p>
-								<p>Первый проект на Javascript.</p>
+								<p class="en">A simple platformer. The game has sounds, moving platforms, doors that open with a lever, stars to collect, enemy.</p>
+								<p class="en">First project on Javascript.</p>
+								<p class="ru _nm">Простой платформер. В игре есть звуки, двигающиеся платформы, двери, открывающиеся рычагом, звёзды для сбора, противник.</p>
+								<p class="ru">Первый проект на Javascript.</p>
 								<div class="_links">
 									<div>
 										<a href="https://mixelte.github.io/Jumper/wwwroot/index.html" target="_blank" rel="noopener noreferrer">
@@ -143,8 +164,10 @@
 						<div class="_largeDescription">
 							<div class="_descriptionImg">
 								<div class="_img2 _img2-sq _img2-lg"><img src="./imgs/jumper.jpg" alt="Gameplay" loading="lazy"></div>
-								<p>Однажды Вертик пошёл за земляникой. Она росла на далёкой поляне в середине дремучего леса. По дороге Вертику встретилось множество препятствий и даже недоброжелатели, но он преодалеет все невзгоды.</p>
-								<p>Управление в игре с помощью стрелок и пробела, либо WSAD. Правый Ctrl - сила земли, для защиты от Ходотунов</p>
+								<p class="en _nm">One day Vertik went to get strawberries. It grew in a distant glade in the middle of a dense forest. On the way Vertik met a lot of obstacles and even ill-wishers, but he will overcome all difficulties.</p>
+								<p class="en">Control in the game using arrows and spacebar, or WSAD. Right Ctrl - the power of the earth, to defend against Hodotunes.</p>
+								<p class="ru _nm">Однажды Вертик пошёл за земляникой. Она росла на далёкой поляне в середине дремучего леса. По дороге Вертику встретилось множество препятствий и даже недоброжелатели, но он преодалеет все невзгоды.</p>
+								<p class="ru">Управление в игре с помощью стрелок и пробела, либо WSAD. Правый Ctrl - сила земли, для защиты от Ходотунов.</p>
 							</div>
 						</div>
 						<div class="_br"></div>
@@ -157,8 +180,10 @@
 						<div class="_description">
 							<div class="_img"><img src="./imgs/maze.png" alt="Project logo" loading="lazy"></div>
 							<div>
-								<p>Текстовая игра в приятном оформлении.</p>
-								<p>По сюжету игры игрок попадает в лабиринт, из которого ему предсттоит выбраться. На пути у игрока встречаются необъяснимые и странные события.</p>
+								<p class="en">A text game in a pleasant design.</p>
+								<p class="en">According to the plot of the game the player finds himself in a maze, from which he has to get out. On the way the player meets unexplained and strange events.</p>
+								<p class="ru _nm">Текстовая игра в приятном оформлении.</p>
+								<p class="ru">По сюжету игры игрок попадает в лабиринт, из которого ему предстоит выбраться. На пути у игрока встречаются необъяснимые и странные события.</p>
 								<div class="_links">
 									<div>
 										<a href="https://mixelte.github.io/mad-maze-game/" target="_blank" rel="noopener noreferrer">
@@ -181,8 +206,10 @@
 						<div class="_description">
 							<div class="_img"><img src="./imgs/game-of-life.png" alt="Project logo" loading="lazy"></div>
 							<div>
-								<p>Домашняя реализация игры Джона Конвея.</p>
-								<p>Доступно рисование, вставка патернов, настройка начальных условий, настройка цветов и скорости</p>
+								<p class="en">A homemade implementation of John Conway's game.</p>
+								<p class="en">Drawing, inserting patterns, setting initial conditions, adjusting colors and speed are available</p>
+								<p class="ru _nm">Домашняя реализация игры Джона Конвея.</p>
+								<p class="ru">Доступно рисование, вставка патернов, настройка начальных условий, настройка цветов и скорости</p>
 								<div class="_links">
 									<div>
 										<a href="https://mixelte.github.io/game-of-life/" target="_blank" rel="noopener noreferrer">
