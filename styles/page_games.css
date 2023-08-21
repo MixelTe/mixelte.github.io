@@ -216,7 +216,6 @@
 }
 .page-games ._links img {
 	width: 2rem;
-	filter: invert(1) brightness(50%) sepia(100%) saturate(10000%) hue-rotate(50deg);
 }
 .page-games ._links a {
 	position: relative;

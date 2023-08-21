@@ -70,6 +70,7 @@ if (pages.includes(page))
 	openPage.state = States.open;
 	openPage.page.style.zIndex = "10";
 	openPage.page.classList.add("open");
+	document.body.classList.add("pageOpened");
 	isOpen = true;
 	const screenSize = Math.max(window.innerWidth, window.innerHeight) * Math.SQRT2;
 	openPage.size = screenSize;
