@@ -55,10 +55,10 @@ a {
 }
 
 body:not(.lang-ru) .ru {
-	display: none;
+	display: none !important;
 }
 .lang-ru .en {
-	display: none;
+	display: none !important;
 }
 
 @media screen and (max-width: 800px) {
@@ -93,25 +93,6 @@ body:not(.lang-ru) .ru {
 .page-index {
 	clip-path: none;
 	overflow-y: auto;
-}
-.page-games {
-	background-color: #00041e;
-	opacity: 1;
-	background-image:  linear-gradient(30deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(150deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(30deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(150deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(60deg, #004c4777 25%, transparent 22.5%, transparent 75%, #004c4777 75%, #004c4777), linear-gradient(60deg, #004c4777 25%, transparent 22.5%, transparent 75%, #004c4777 75%, #004c4777);
-	background-size: 80px 140px;
-	background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
-}
-.page-games .card {
-	--gradient: linear-gradient(45deg, #ffa400 0%, #ef3ff1 100%);
-}
-.page-utils {
-	background: radial-gradient(at 35% 95%, rgba(0,255,100,0.3) 0%, transparent 26%),
-            radial-gradient(at 90% 60%, rgba(12,218,0,0.24) 0%, transparent 26%),
-            radial-gradient(at 10% 10%, rgba(0,249,255,0.32) 0%, transparent 33%),
-            linear-gradient(90deg, #d2ffce 0%, #f4ffb0 100%);
-}
-.page-utils .card {
-	--gradient: linear-gradient(45deg, #ffe600 0%, #00cd9a 100%);
 }
 .page-other {
 	background: radial-gradient(at 35% 95%, rgba(255,71,155,0.3) 0%, transparent 26%),

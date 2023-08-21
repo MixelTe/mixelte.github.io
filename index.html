@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="styles/card.css">
 	<link rel="stylesheet" href="styles/base.css">
 	<link rel="stylesheet" href="styles/page_games.css">
+	<link rel="stylesheet" href="styles/page_utils.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<title>Mixel Te - Index</title>
 	<script src="./scripts/pageSwitch.js" defer></script>
@@ -241,26 +242,6 @@
 					}
 				</script>
 			</div>
-			<!-- <ul>
-Games:
-The Legend of Pirate
-Адский Забег
-Вертик
-Сумашедший лабиринт
-Game of Life
-
-Utils:
-Screensaver Частицы
-Снежинки
-Screen Capture
-Изучатель формул
-Книга Рецептов
-
-Other:
-Сайт-визитка
-String Art
-Кубик Рубика
-			</ul> -->
 		</div>
 		<svg style="display: none;">
 			<filter id="wavy2">
@@ -272,7 +253,134 @@ String Art
 	<div class="page page-utils" id="page_utils">
 		<div class="content">
 			<div class="pageMarker card" id="pageMarker_utils"><div>Utils</div><div></div></div>
-			<h1 class="title card"><div><img id="back_utils" src="./imgs/arrow_back.png" alt="Back">Utils</div><div></div></h1>
+			<div class="_window">
+				<div class="_windowBar _windowBar_large">
+					<div>
+						<div class="_windowBarText"></div>
+						<div class="_windowBarControls">
+							<button aria-label="Minimize"></button>
+							<button aria-label="Maximize"></button>
+							<button aria-label="Close" id="back_utils"></button>
+						</div>
+					</div>
+					<div>
+						<div class="_windowExplorerArrows"><button></button><button disabled></button></div>
+						<div class="_windowExplorer">
+							<img src="./imgs/win/folder.png">
+							<div class="_explorerArrow"></div>
+							<span>Mixel Te</span>
+							<div class="_explorerArrow"></div>
+							<span class="en">Projects</span>
+							<span class="ru">Проекты</span>
+							<div class="_explorerArrow"></div>
+							<span class="en">Utils</span>
+							<span class="ru">Утилиты</span>
+							<div class="_explorerArrow"></div>
+						</div>
+						<input placeholder="Search: Utils" class="_windowExplorer _windowExplorer_search en" />
+						<input placeholder="Поиск в: Утилиты" class="_windowExplorer _windowExplorer_search ru" />
+					</div>
+				</div>
+				<div class="_toolbar">
+					<button><span class="en">Organize</span><span class="ru">Упорядочить</span><span class="_explorerArrow _explorerArrow_down"></span></button>
+					<button><span class="en">Open</span><span class="ru">Открыть</span></button>
+					<button><span class="en">New folder</span><span class="ru">Новая папка</span></button>
+					<span></span>
+					<button><img src="./imgs/win/options.png"><span class="_explorerArrow _explorerArrow_down"></span></button>
+					<button><img src="./imgs/win/layout.png"></button>
+					<button><img src="./imgs/win/help.png"></button>
+				</div>
+				<div class="_windowBody">
+					<div class="_explorer">
+						<div class="_folders">
+							<ul>
+								<a class="_li" href="#"><img src="imgs/win/favorite.png"><span class="en">Favorites</span><span class="ru">Избранное</span></a>
+								<a class="_li" href="#"><img src="imgs/win/desktop.png"><span class="en">Desktop</span><span class="ru">Рабочий стол</span></a>
+								<a class="_li" href="#"><img src="imgs/win/downloads.png"><span class="en">Downloads</span><span class="ru">Загрузки</span></a>
+								<!-- <a class="_li" href="#"><img src="imgs/win/">Lorem</a> -->
+							</ul>
+							<ul>
+								<a class="_li" href="#"><img src="imgs/win/explorer.png"><span class="en">Libraries</span><span class="ru">Библиотеки</span></a>
+								<a class="_li" href="#"><img src="imgs/win/document.png"><span class="en">Documents</span><span class="ru">Документы</span></a>
+								<a class="_li" href="#"><img src="imgs/win/music.png"><span class="en">Music</span><span class="ru">Музыка</span></a>
+								<a class="_li" href="#"><img src="imgs/win/picture.png"><span class="en">Pictures</span><span class="ru">Картинки</span></a>
+								<a class="_li" href="#"><img src="imgs/win/video.png"><span class="en">Videos</span><span class="ru">Видео</span></a>
+							</ul>
+							<ul>
+								<a class="_li" href="#"><img src="imgs/win/computer.png"><span class="en">Computer</span><span class="ru">Компьютер</span></a>
+								<a class="_li" href="#"><img src="imgs/win/drive_win.png"><span class="en">Local Disk (C:)</span><span class="ru">Локальный диск (C:)</span></a>
+								<a class="_li" href="#"><img src="imgs/win/drive.png"><span class="en">Local Disk (D:)</span><span class="ru">Локальный диск (D:)</span></a>
+								<a class="_li" href="#"><img src="imgs/win/drive.png"><span class="en">Local Disk (E:)</span><span class="ru">Локальный диск (E:)</span></a>
+							</ul>
+						</div>
+						<div class="_projects">
+							<div class="_explorerHeader">
+								<div><span class="en">Name</span><span class="ru">Имя</span></div>
+								<div><span class="en">Date modified</span><span class="ru">Дата изменения</span></div>
+								<div><span class="en">Type</span><span class="ru">Тип</span></div>
+								<div><span class="en">Size</span><span class="ru">Размер</span></div>
+							</div>
+							<a class="_li" href="#util1">
+								<span>
+									<img src="imgs/win/folder.png">
+									<span class="en">Screensaver Particles</span>
+									<span class="ru">Screensaver Частицы</span>
+								</span>
+								<span data-utils-modDate="ScreensaverParticles">26.11.2022</span>
+								<span>Type</span><span>1 288 KB</span>
+							</a>
+							<a class="_li" href="#util2">
+								<span>
+									<img src="imgs/win/folder.png">
+									<span class="en">SnowFlakes</span>
+									<span class="ru">Снежинки</span>
+								</span>
+								<span data-utils-modDate="SnowFlakes">18.01.2023</span>
+								<span>Type</span><span>143 730 KB</span>
+							</a>
+							<a class="_li" href="#util3">
+								<span>
+									<img src="imgs/win/folder.png">
+									<span class="en">Screen Capture</span>
+									<span class="ru">Screen Capture</span>
+								</span>
+								<span data-utils-modDate="ScreenCapture">18.07.2023</span>
+								<span>Type</span><span>127 KB</span>
+							</a>
+							<a class="_li" href="#util4">
+								<span>
+									<img src="imgs/win/folder.png">
+									<span class="en">Formula Learner</span>
+									<span class="ru">Изучатель формул</span>
+								</span>
+								<span data-utils-modDate="physicsLearner">04.02.2022</span>
+								<span>Type</span><span>55 KB</span>
+							</a>
+							<a class="_li" href="#util5">
+								<span>
+									<img src="imgs/win/folder.png">
+									<span class="en">Recipe Book</span>
+									<span class="ru">Книга Рецептов</span>
+								</span>
+								<span data-utils-modDate="RecipeBook">10.04.2022</span>
+								<span>Type</span><span>10 325 KB</span>
+							</a>
+						</div>
+						<script>
+							document.querySelectorAll("[data-utils-modDate]").forEach(el => {
+								const repo = el.getAttribute("data-utils-modDate");
+								fetch("https://api.github.com/repos/MixelTe/" + repo)
+								.then(v => v.json())
+								.then(v => {
+									const date = new Date(v.updated_at);
+									const n = n => `${n}`.padStart(2, "0");
+									el.innerText = `${n(date.getDate())}.${n(date.getMonth() + 1)}.${n(date.getFullYear())}`;
+								});
+							})
+						</script>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="page page-other" id="page_other">

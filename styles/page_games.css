@@ -1,7 +1,14 @@
 .page-games {
 	--c: #7F3300;
-	--c2: #7F3300;
+	background-color: #00041e;
+	opacity: 1;
+	background-image:  linear-gradient(30deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(150deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(30deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(150deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(60deg, #004c4777 25%, transparent 22.5%, transparent 75%, #004c4777 75%, #004c4777), linear-gradient(60deg, #004c4777 25%, transparent 22.5%, transparent 75%, #004c4777 75%, #004c4777);
+	background-size: 80px 140px;
+	background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
+/* .page-games .card {
+	--gradient: linear-gradient(45deg, #ffa400 0%, #ef3ff1 100%);
+} */
 .page-games .pageMarker {
 	font-family: Pirata One, "PT Sans", Arial, Helvetica, sans-serif;
 	color: var(--c);
