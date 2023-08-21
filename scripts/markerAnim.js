@@ -9,7 +9,6 @@ elements.forEach((el, i) => el.movement = {
 const Speed = 15;
 // const Speed = 0;
 const animation = createAnim();
-const page_index = document.getElementById("page_index");
 
 animate();
 function animate()
