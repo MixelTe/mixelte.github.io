@@ -357,7 +357,11 @@
 	filter: blur(1px);
 }
 
-.page-games ._descriptionImg {
+.page-games ._descriptionImg._jsa {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 1em;
 }
 .page-games ._descriptionImg ._img2 {
 	float: right;
@@ -394,6 +398,10 @@
 .page-games ._img2-sq {
 	width: 8em;
 	height: 8em;
+}
+.page-games ._img2-sq._img2-lg {
+	width: 10em;
+	height: 10em;
 }
 .page-games ._img2 img {
 	height: 100%;
