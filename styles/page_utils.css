@@ -34,9 +34,6 @@
 .page-utils .content {
 	min-height: 600px;
 }
-.page-utils .content > ._window {
-	margin-top: 2rem;
-}
 
 .page-utils ._window {
 	border: 1px solid rgba(0, 0, 0, .7);
@@ -44,6 +41,7 @@
 	box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, .7);
 	position: relative;
 	z-index: 0;
+	margin-top: 2rem;
 }
 
 .page-utils ._window::before {
@@ -69,6 +67,9 @@
 }
 
 .page-utils ._windowBarText {
+	display: flex;
+	align-items: center;
+	gap: 6px;
 	color: #000;
 	letter-spacing: 0;
 	line-height: 15px;
@@ -281,7 +282,7 @@
 	gap: 8px;
 }
 .page-utils ._toolbar button {
-	padding: 6px 10px;
+	padding: 2px 6px;
 	background: transparent;
 	border: none;
 	font: inherit;
@@ -290,7 +291,10 @@
 	align-items: center;
 	outline: none;
 }
-.page-utils ._toolbar span {
+.page-utils ._toolbar_large button {
+	padding: 6px 10px;
+}
+.page-utils ._toolbar > span {
 	flex-grow: 1;
 }
 .page-utils ._toolbar button:hover, .page-utils ._toolbar button:focus-visible {
@@ -307,7 +311,114 @@
 		display: none;
 	}
 }
-
+.page-utils ._toolbar > div {
+	position: relative;
+}
+.page-utils ._toolbar ul {
+    display: block;
+	opacity: 0;
+	pointer-events: none;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 99;
+	background: #f0f0f0;
+    border: 1px solid rgba(0,0,0,.4);
+    box-shadow: 4px 4px 3px -2px rgba(0,0,0,.5);
+    color: initial;
+    min-width: 150px;
+    padding: 2px;
+	cursor: default;
+    list-style: none;
+    margin: 0;
+}
+.page-utils ._toolbar li > ul {
+    top: 0;
+	left: 100%;
+}
+.page-utils ._toolbar ul::before {
+    box-shadow: inset 1px 0 rgba(0,0,0,.15), inset -1px 0 #fff;
+    content: "";
+    height: calc(100% - 4px);
+    left: 30px;
+    pointer-events: none;
+    position: absolute;
+    width: 2px
+}
+.page-utils ._toolbar div:hover > ul, .page-utils ._toolbar li:hover > ul,
+.page-utils ._toolbar ._mi:focus ~ ul, .page-utils ._toolbar ul:has(._mi:focus),
+.page-utils ._toolbar ul:has(._mi input:focus),
+.page-utils ._toolbar button:focus ~ ul, .page-utils ._toolbar ul:has(button:focus) {
+	opacity: 1;
+	pointer-events: initial;
+}
+.page-utils ._toolbar li {
+	position: relative;
+}
+.page-utils ._toolbar ._mi {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+	gap: 48px;
+    justify-content: space-between;
+    padding: 4px 10px 4px 32px;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+}
+.page-utils ._toolbar ._mi:hover,
+.page-utils ._toolbar ._mi:focus-visible,
+.page-utils ._toolbar ._mi:has(input:focus) {
+	background: linear-gradient(180deg,hsla(0,0%,100%,.6),rgba(230,236,245,.8) 90%,hsla(0,0%,100%,.8));
+    border-color: #b8d6fb;
+	color: black;
+}
+.page-utils ._toolbar ._mid::after {
+	box-shadow: inset 0 1px rgba(0,0,0,.15), inset 0 -1px #fff;
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 3px 0 2px 30px;
+    pointer-events: none;
+}
+.page-utils ._toolbar ._mi:has(~ul)::after {
+	border: 4px solid transparent;
+    border-left-color: currentcolor;
+    content: "";
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.page-utils ._toolbar ._mi input {
+	position: fixed;
+	opacity: 0;
+	pointer-events: none;
+}
+.page-utils ._toolbar ._mi:has(input:checked)::before {
+	content: "";
+	background: linear-gradient(180deg,hsla(0,0%,100%,.6),rgba(230,236,245,.8) 90%,hsla(0,0%,100%,.8));
+    border-radius: inherit;
+    box-shadow: 0 0 0 1px #b3d3f9;
+    box-sizing: border-box;
+    height: 22px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 22px;
+}
+.page-utils ._toolbar ._mi:has(input:checked)::after {
+	content: "\2714";
+	position: absolute;
+    display: block;
+    font-weight: 700;
+	color: #0c12a1;
+    font-size: 10pt;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-52%);
+}
 
 .page-utils ._explorer {
 	display: flex;
@@ -734,4 +845,37 @@
 }
 .page-utils ._controlBtn:last-child:hover, .page-utils ._controlBtn:last-child:focus-visible {
 	filter: brightness(0.9) contrast(1.2);
+}
+
+
+.page-utils ._windowProject {
+	position: fixed;
+	top: calc(50% - 42px);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 750px;
+}
+
+.page-utils ._windowProject ._windowBody {
+	background-color: white;
+	min-height: 400px;
+	overflow-y: scroll;
+	font-size: 1rem;
+}
+
+.page-utils ._statusBar {
+	background: #f0f0f0;
+    border: 1px solid rgba(0,0,0,.7);
+    border-top: 0;
+    box-shadow: 0 0.5px 1px 0.5px #fff;
+    display: flex;
+	justify-content: end;
+    margin: -6px 6px 6px;
+	padding-right: 24px;
+}
+.page-utils ._statusBar div {
+	border-left: 1px solid #cfcfcf;
+    margin: 0;
+    padding: 2px 20px 2px 10px;
 }

@@ -281,7 +281,7 @@
 						<input placeholder="Поиск в: Утилиты" class="_windowExplorer _windowExplorer_search ru" />
 					</div>
 				</div>
-				<div class="_toolbar">
+				<div class="_toolbar _toolbar_large">
 					<button><span class="en">Organize</span><span class="ru">Упорядочить</span><span class="_explorerArrow _explorerArrow_down"></span></button>
 					<button><span class="en">Open</span><span class="ru">Открыть</span></button>
 					<button><span class="en">New folder</span><span class="ru">Новая папка</span></button>
@@ -388,6 +388,93 @@
 					</div>
 				</div>
 			</div>
+			<div class="_window _windowProject">
+				<div class="_windowBar">
+					<div class="_windowBarText"><img src="./imgs/win/notepad.png"><span class="en">Untitled - Notepad</span><span class="ru">Безымянный - Блокнот</span></div>
+					<div class="_windowBarControls">
+						<button aria-label="Minimize" id="back_utils"></button>
+						<button aria-label="Maximize" onclick="document.fullscreen ? document.exitFullscreen() : document.body.requestFullscreen()"></button>
+						<button aria-label="Close" id="back_utils"></button>
+					</div>
+				</div>
+				<div class="_toolbar">
+					<div>
+						<button><span class="en">File</span><span class="ru">Файл</span></button>
+						<ul>
+							<li><button class="_mi"><span class="en">Create</span><span class="ru">Создать</span> <span>CTRL+N</span></button></li>
+							<li><button class="_mi"><span class="en">New window</span><span class="ru">Новое окно</span> <span>CTRL+SHIFT+N</span></button></li>
+							<li><button class="_mi"><span class="en">Open...</span><span class="ru">Открыть...</span> <span>CTRL+O</span></button></li>
+							<li><button class="_mi"><span class="en">Save</span><span class="ru">Сохранить</span> <span>CTRL+S</span></button></li>
+							<li class="_mid"><button class="_mi"><span class="en">Save as...</span><span class="ru">Сохранить как...</span> <span>CTRL+SHIFT+N</span></button></li>
+							<li><button class="_mi"><span class="en">Page parametrs...</span><span class="ru">Параметры страницы...</span></button></li>
+							<li class="_mid"><button class="_mi"><span class="en">Print...</span><span class="ru">Печать...</span> <span>CTRL+P</span></button></li>
+							<li><button class="_mi"><span class="en">Quit</span><span class="ru">Выход</span></button></li>
+						</ul>
+					</div>
+					<div>
+						<button><span class="en">Edit</span><span class="ru">Правка</span></button>
+						<ul>
+							<li class="_mid"><button class="_mi"><span class="en">Cancel</span><span class="ru">Отменить</span> <span>CTRL+Z</span></button></li>
+							<li><button class="_mi"><span class="en">Cut</span><span class="ru">Вырезать</span> <span>CTRL+X</span></button></li>
+							<li><button class="_mi"><span class="en">Copy</span><span class="ru">Копировать</span> <span>CTRL+C</span></button></li>
+							<li><button class="_mi"><span class="en">Paste</span><span class="ru">Вставить</span> <span>CTRL+V</span></button></li>
+							<li class="_mid"><button class="_mi"><span class="en">Delete</span><span class="ru">Удалить</span> <span>Del</span></button></li>
+							<li><button class="_mi"><span class="en">Find...</span><span class="ru">Найти</span> <span>CTRL+F</span></button></li>
+							<li><button class="_mi"><span class="en">Find next</span><span class="ru">Найти далее</span> <span>F3</span></button></li>
+							<li><button class="_mi"><span class="en">Find previous</span><span class="ru">Найти ранее</span> <span>SHIFT+F3</span></button></li>
+							<li><button class="_mi"><span class="en">Replace...</span><span class="ru">Заменить...</span> <span>CTRL+H</span></button></li>
+							<li class="_mid"><button class="_mi"><span class="en">Go to...</span><span class="ru">Перейти...</span> <span>CTRL+G</span></button></li>
+							<li><button class="_mi"><span class="en">Select all</span><span class="ru">Выделить все</span> <span>CTRL+A</span></button></li>
+						</ul>
+					</div>
+					<div>
+						<button><span class="en">Format</span><span class="ru">Формат</span></button>
+						<ul>
+							<li>
+								<label class="_mi">
+									<input type="checkbox" checked>
+									<span class="en">Word wrap</span><span class="ru">Перенос по словам</span>
+								</label>
+							</li>
+							<li><button class="_mi"><span class="en">Font...</span><span class="ru">Шрифт...</span></button></li>
+						</ul>
+					</div>
+					<div>
+						<button><span class="en">View</span><span class="ru">Вид</span></button>
+						<ul>
+							<li>
+								<button class="_mi"><span class="en">Zoom</span><span class="ru">Масштаб</span></button>
+								<ul>
+									<li><button class="_mi"><span class="en">Zoom in</span><span class="ru">Увеличить</span> <span class="en">CTRL+plus (+)</span><span class="ru">CTRL+плюс (+)</span></button></li>
+									<li><button class="_mi"><span class="en">Zoom out</span><span class="ru">Уменьшить</span> <span class="en">CTRL+minus (-)</span><span class="ru">CTRL+минус (-)</span></button></li>
+									<li><button class="_mi"><span class="en">Reset zoom</span><span class="ru">Восстановить масштаб по умолчанию</span> <span>CTRL+0</span></button></li>
+								</ul>
+							</li>
+							<label class="_mi">
+								<input type="checkbox" checked>
+								<span class="en">State bar</span><span class="ru">Строка состояния</span>
+							</label>
+						</ul>
+					</div>
+					<div>
+						<button><span class="en">Help</span><span class="ru">Справка</span></button>
+						<ul>
+							<li><button class="_mi"><span class="en">Help</span><span class="ru">Посмотреть справку</span></button></li>
+							<li class="_mid"><button class="_mi"><span class="en">Send feedback</span><span class="ru">Отправить отзыв</span></button></li>
+							<li><button class="_mi"><span class="en">About</span><span class="ru">О программе</span></button></li>
+						</ul>
+					</div>
+				</div>
+				<div class="_windowBody">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repellendus neque voluptas omnis perspiciatis sit, possimus molestiae ea. Beatae dolorum, ab tenetur est laudantium nesciunt omnis neque ullam eaque tempora.
+				</div>
+				<div class="_statusBar">
+					<div><span class="en">Ln 3, Col 37</span><span class="ru">Стр 3, стлб 37</span></div>
+					<div>100%</div>
+					<div>Windows (CRLF)</div>
+					<div>UTF-8</div>
+				</div>
+			</div>
 			<div class="_controlPanel">
 				<button class="_winBtn">
 					<svg viewBox="-12 -12 40 35" xmlns="http://www.w3.org/2000/svg">
@@ -422,7 +509,7 @@
 					</svg>
 				</button>
 				<button class="_controlBtn _appBtn _controlBtn_active"><img src="./imgs/win/explorer_lg.png"></button>
-				<button class="_controlBtn _appBtn"><img src="./imgs/win/icon.png"></button>
+				<button class="_controlBtn _appBtn"><img src="./imgs/win/notepad_lg.png"></button>
 				<div style="flex-grow: 1;"></div>
 				<button class="_controlBtn" id="langSwitch"></button>
 				<button class="_controlBtn"><span class="_explorerArrow" style="transform: rotate(-90deg);"></span></button>
