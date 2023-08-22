@@ -148,6 +148,9 @@
 	padding: 6px;
 	font: 9pt Segoe UI, sans-serif;
 }
+.page-utils ._np {
+	padding: 0;
+}
 
 
 .page-utils ._windowBar_large {
@@ -288,9 +291,11 @@
 .page-utils ._explorer {
 	display: flex;
 	gap: 16px;
+	background-color: #fdfdfd;
 }
 .page-utils ._folders {
 	flex-basis: 180px;
+	padding-top: 6px;
 }
 .page-utils ._projects {
 	flex-grow: 1;
@@ -332,15 +337,15 @@
 	border-color: #8e9aa6;
 }
 .page-utils ul ._li {
-	padding-left: 24px;
+	padding-left: 28px;
 }
 .page-utils ul ._li:first-child {
-	padding-left: 16px;
+	padding-left: 20px;
 }
 .page-utils ul ._li::before {
     content: "";
     position: absolute;
-    left: 16px;
+    left: 20px;
     top: calc(50% - 3px);
 	border: 4px solid transparent;
     border-left-color: currentColor;
@@ -350,7 +355,7 @@
 .page-utils ul ._li:first-child::before {
 	transform: rotate(45deg);
 	color: black;
-    left: 8px;
+    left: 10px;
 }
 .page-utils ._folders ul:first-child ._li:not(:first-child)::before {
 	color: transparent;
@@ -360,8 +365,17 @@
 	margin-bottom: 4px;
 }
 .page-utils ._explorerHeader div {
-	border-right: 1px solid #bbb;
-	margin-right: 6px;
+	position: relative;
+	padding-top: 6px;
+}
+.page-utils ._explorerHeader div::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 6px;
+	width: 1px;
+	height: 16px;
+	background-color: #e5e5e5;
 }
 .page-utils ._projects ._li, .page-utils ._explorerHeader {
 	display: grid;
@@ -376,3 +390,224 @@
 	justify-content: end;
 	padding-right: 8px;
 }
+
+.page-utils ._explorerBottom {
+	background-color: #f1f4fb;
+	height: 50px;
+	border-top: 2px solid #cbd9e9;
+	display: flex;
+	padding: 2px;
+	padding-left: 16px;
+	gap: 16px;
+	box-sizing: border-box;
+}
+.page-utils ._explorerBottom img {
+	height: 100%;
+}
+.page-utils ._explorerBottom div {
+	margin-top: 4px;
+	color: #163e91;
+}
+
+
+
+.page-utils ::-webkit-scrollbar, .page-utils::-webkit-scrollbar {
+	width: 16px;
+	height: 16px;
+}
+
+.page-utils ::-webkit-scrollbar-button:single-button, .page-utils::-webkit-scrollbar-button:single-button {
+	width: 16px;
+	height: 16px;
+	background-color: #efefef;
+	background: linear-gradient(90deg, hsl(0 0% 75% / 1), #efefef 2px, #efefef 4px, transparent 4px),
+		linear-gradient(-90deg, hsl(0 0% 75% / 1), #efefef 1px, #efefef 4px, transparent 4px),
+		linear-gradient(225deg, #efefef 10px, transparent 10px, transparent),
+		linear-gradient(180deg, transparent 10px, #efefef 10px, #efefef),
+		linear-gradient(135deg, transparent 10px, black 10px, #b6b6b6 14px),
+		#EFEFF0;
+}
+
+.page-utils ::-webkit-scrollbar-button:single-button:vertical:decrement, .page-utils::-webkit-scrollbar-button:single-button:vertical:decrement {
+	background: linear-gradient(180deg, hsl(0 0% 85% / 1), transparent 2px),
+		linear-gradient(90deg, hsl(0 0% 75% / 1), #efefef 2px, #efefef 4px, transparent 4px),
+		linear-gradient(-90deg, hsl(0 0% 75% / 1), #efefef 1px, #efefef 4px, transparent 4px),
+		linear-gradient(225deg, #efefef 10px, transparent 10px, transparent),
+		linear-gradient(180deg, transparent 10px, #efefef 10px, #efefef),
+		linear-gradient(135deg, transparent 10px, black 10px, #b6b6b6 14px),
+		#EFEFF0;
+}
+.page-utils ::-webkit-scrollbar-button:single-button:vertical:decrement:hover, .page-utils::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+	box-shadow: inset #3c7fb1 0px 0px 0px 1px, inset #e4e5e766 0px 0px 0px 2px, inset #f9f9f9 0px -1px 0px 1px, inset #f9f9f9 0px 1px 0px 1px, #cacace 0px 0px 0px 1px;
+	background: linear-gradient(90deg, #e5f4fd, #e5f4fd), linear-gradient(90deg, #e5f4fd, #e5f4fd), linear-gradient(90deg, #e5f4fd, #e5f4fd 4px, transparent 4px),  linear-gradient(-90deg, #b3e0f9, #b3e0f9 4px, transparent 4px),  linear-gradient(225deg, #b3e0f9 10px, transparent 10px, transparent),  linear-gradient(180deg, transparent 10px, #b3e0f9 10px, #b3e0f9),  linear-gradient(135deg, transparent 10px, black 10px, #b6b6b6 14px),  #e5f4fd;
+	background-position: 3px 0px, 3px 10px, center, center, center, center, center, center;
+	background-size: 5px 6px, 5px 6px, contain, contain, contain, contain, contain, contain, contain;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+}
+.page-utils ::-webkit-scrollbar-button:single-button:vertical:decrement:active, .page-utils::-webkit-scrollbar-button:single-button:vertical:decrement:active {
+	box-shadow: inset #6d91ab 0px 0px 0px 1px, inset #e4e5e766 0px 0px 0px 2px, inset #f9f9f9 0px -1px 0px 1px, inset #f9f9f9 0px 1px 0px 1px;
+	background: linear-gradient(90deg, #cee9f8, #cee9f8), linear-gradient(90deg, #cee9f8, #cee9f8), linear-gradient(90deg, #cee9f8, #cee9f8 4px, transparent 4px),  linear-gradient(-90deg, #86c6e8, #86c6e8 4px, transparent 4px),  linear-gradient(225deg, #86c6e8 10px, transparent 10px, transparent),  linear-gradient(180deg, transparent 10px, #86c6e8 10px, #86c6e8),  linear-gradient(135deg, transparent 10px, black 10px, #b6b6b6 14px),  #cee9f8;
+	background-position: 3px 0px, 3px 10px, center, center, center, center, center, center;
+	background-size: 5px 6px, 5px 6px, contain, contain, contain, contain, contain, contain, contain;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+}
+
+.page-utils ::-webkit-scrollbar-button:single-button:vertical:increment, .page-utils::-webkit-scrollbar-button:single-button:vertical:increment {
+	background: linear-gradient(0deg, hsl(0 0% 85% / 1), transparent 2px),
+		linear-gradient(90deg, hsl(0 0% 75% / 1), #efefef 2px, #efefef 4px, transparent 4px),
+		linear-gradient(-90deg, hsl(0 0% 75% / 1), #efefef 1px, #efefef 4px, transparent 4px),
+		linear-gradient(45deg, #efefef 8.5px, transparent 8.5px, transparent),
+		linear-gradient(0deg, transparent 8px, #efefef 8px, #efefef),
+		linear-gradient(135deg, transparent 8px, black 8px, black 10px, #b6b6b6 14px, transparent 14px),
+		#EFEFF0;
+}
+.page-utils ::-webkit-scrollbar-button:single-button:vertical:increment:hover, .page-utils::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+	box-shadow: inset #3c7fb1 0px 0px 0px 1px, inset #e4e5e766 0px 0px 0px 2px, inset #f9f9f9 0px -1px 0px 1px, inset #f9f9f9 0px 1px 0px 1px, #cacace 0px 0px 0px 1px;
+	background: linear-gradient(90deg, #e5f4fd, #e5f4fd), linear-gradient(90deg, #b3e0f9, #b3e0f9), linear-gradient(0deg, #e5f4fd, transparent 2px),  linear-gradient(90deg, #e5f4fd, #e5f4fd 4px, transparent 4px),  linear-gradient(-90deg, #b3e0f9, #b3e0f9 4px, transparent 4px),  linear-gradient(45deg, #e5f4fd 8.5px, transparent 8.5px, transparent),  linear-gradient(0deg, transparent 8px, #b3e0f9 8px, #b3e0f9),  linear-gradient(135deg, transparent 8px, black 8px, black 10px, #b6b6b6 14px, transparent 14px),  #b3e0f9;
+	background-position: 3px 0px, 8px 12px, center, center, center, center, center, center;
+	background-size: 5px 8px, 5px 3px, contain, contain, contain, contain, contain, contain, contain;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+}
+.page-utils ::-webkit-scrollbar-button:single-button:vertical:increment:active, .page-utils::-webkit-scrollbar-button:single-button:vertical:increment:active {
+	box-shadow: inset #3c7fb1 0px 0px 0px 1px, inset #e4e5e766 0px 0px 0px 2px, inset #f9f9f9 0px -1px 0px 1px, inset #f9f9f9 0px 1px 0px 1px, #cacace 0px 0px 0px 1px;
+	background: linear-gradient(90deg, #cee9f8, #cee9f8), linear-gradient(90deg, #86c6e8, #86c6e8), linear-gradient(0deg, #cee9f8, transparent 2px),  linear-gradient(90deg, #cee9f8, #cee9f8 4px, transparent 4px),  linear-gradient(-90deg, #86c6e8, #86c6e8 4px, transparent 4px),  linear-gradient(45deg, #cee9f8 8.5px, transparent 8.5px, transparent),  linear-gradient(0deg, transparent 8px, #86c6e8 8px, #86c6e8),  linear-gradient(135deg, transparent 8px, black 8px, black 10px, #b6b6b6 14px, transparent 14px),  #86c6e8;
+	background-position: 3px 0px, 8px 12px, center, center, center, center, center, center;
+	background-size: 5px 8px, 5px 3px, contain, contain, contain, contain, contain, contain, contain;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+}
+
+.page-utils ::-webkit-scrollbar-button:single-button:horizontal:decrement, .page-utils::-webkit-scrollbar-button:single-button:horizontal:decrement {
+	background: linear-gradient(90deg, hsl(0 0% 85% / 1), transparent 2px),
+		linear-gradient(180deg, hsl(0 0% 75% / 1), #efefef 2px, #efefef 4px, transparent 4px),
+		linear-gradient(0deg, hsl(0 0% 75% / 1), #efefef 1px, #efefef 4px, transparent 4px),
+		linear-gradient(45deg, #efefef 10px, transparent 10px, transparent),
+		linear-gradient(90deg, transparent 10px, #efefef 10px, #efefef),
+		linear-gradient(135deg, transparent 10px, black 10px, #b6b6b6 14px),
+		#EFEFF0;
+}
+.page-utils ::-webkit-scrollbar-button:single-button:horizontal:decrement:hover, .page-utils::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+	box-shadow: inset #3c7fb1 0px 0px 0px 1px, inset #e4e5e766 0px 0px 0px 2px, inset #f9f9f9 -1px 0px 0px 1px, inset #f9f9f9 1px 0px 0px 1px, #cacace 0px 0px 0px 1px;
+	background: linear-gradient(90deg, #e5f4fd, #e5f4fd), linear-gradient(90deg, #b3e0f9, #b3e0f9), linear-gradient(90deg, #b3e0f9 2px, transparent 2px), linear-gradient(180deg, #e5f4fd 4px, transparent 4px), linear-gradient(0deg, #b3e0f9, #b3e0f9 4px, transparent 4px), linear-gradient(45deg, #b3e0f9 10px, transparent 10px, transparent), linear-gradient(90deg, transparent 10px, #e5f4fd 10px, #e5f4fd), linear-gradient(135deg, transparent 10px, black 10px, #b6b6b6 14px), #e5f4fd;
+	background-position: 0px 0px, 10px 8px, center, center, center, center, center, center;
+	background-size: 6px 8px, 6px 4px, contain, contain, contain, contain, contain, contain, contain;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+}
+.page-utils ::-webkit-scrollbar-button:single-button:horizontal:decrement:active, .page-utils::-webkit-scrollbar-button:single-button:horizontal:decrement:active {
+	box-shadow: inset #3c7fb1 0px 0px 0px 1px, inset #e4e5e766 0px 0px 0px 2px, inset #f9f9f9 -1px 0px 0px 1px, inset #f9f9f9 1px 0px 0px 1px, #cacace 0px 0px 0px 1px;
+	background: linear-gradient(90deg, #cee9f8, #cee9f8), linear-gradient(90deg, #86c6e8, #86c6e8), linear-gradient(90deg, #86c6e8 2px, transparent 2px), linear-gradient(180deg, #cee9f8 4px, transparent 4px), linear-gradient(0deg, #86c6e8, #86c6e8 4px, transparent 4px), linear-gradient(45deg, #86c6e8 10px, transparent 10px, transparent), linear-gradient(90deg, transparent 10px, #cee9f8 10px, #cee9f8), linear-gradient(135deg, transparent 10px, black 10px, #b6b6b6 14px), #cee9f8;
+	background-position: 0px 0px, 10px 8px, center, center, center, center, center, center;
+	background-size: 6px 8px, 6px 4px, contain, contain, contain, contain, contain, contain, contain;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+}
+
+.page-utils ::-webkit-scrollbar-button:single-button:horizontal:increment, .page-utils::-webkit-scrollbar-button:single-button:horizontal:increment {
+	background: linear-gradient(270deg, hsl(0 0% 85% / 1), transparent 2px),
+		linear-gradient(180deg, hsl(0 0% 75% / 1), #efefef 2px, #efefef 4px, transparent 4px),
+		linear-gradient(0deg, hsl(0 0% 75% / 1), #efefef 1px, #efefef 4px, transparent 4px),
+		linear-gradient(225deg, #efefef 8.5px, transparent 8.5px, transparent),
+		linear-gradient(270deg, transparent 8px, #efefef 8px, #efefef),
+		linear-gradient(135deg, transparent 8px, black 8px, black 10px, #b6b6b6 14px, transparent 14px),
+		#EFEFF0;
+}
+.page-utils ::-webkit-scrollbar-button:single-button:horizontal:increment:hover, .page-utils::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
+	box-shadow: inset #3c7fb1 0px 0px 0px 1px, inset #e4e5e766 0px 0px 0px 2px, inset #f9f9f9 -1px 0px 0px 1px, inset #f9f9f9 1px 0px 0px 1px, #cacace 0px 0px 0px 1px;
+	background: linear-gradient(90deg, #e5f4fd, #e5f4fd), linear-gradient(90deg, #b3e0f9, #b3e0f9), linear-gradient(270deg, #e5f4fd, transparent 2px), linear-gradient(180deg, #b3e0f9, #e5f4fd 2px, #e5f4fd 4px, transparent 4px), linear-gradient(0deg, #b3e0f9, #b3e0f9 4px, transparent 4px), linear-gradient(225deg, #e5f4fd 8.5px, transparent 8.5px, transparent), linear-gradient(270deg, transparent 8px, #b3e0f9 8px, #b3e0f9), linear-gradient(135deg, transparent 8px, black 8px, black 10px, #b6b6b6 14px, transparent 14px), #b3e0f9;
+	background-position: 0px 0px, 12px 8px, center, center, center, center, center, center;
+	background-size: 8px 8px, 2px 2px, contain, contain, contain, contain, contain, contain, contain;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+}
+.page-utils ::-webkit-scrollbar-button:single-button:horizontal:increment:active, .page-utils::-webkit-scrollbar-button:single-button:horizontal:increment:active {
+	box-shadow: inset #3c7fb1 0px 0px 0px 1px, inset #e4e5e766 0px 0px 0px 2px, inset #f9f9f9 -1px 0px 0px 1px, inset #f9f9f9 1px 0px 0px 1px, #cacace 0px 0px 0px 1px;
+	background: linear-gradient(90deg, #cee9f8, #cee9f8), linear-gradient(90deg, #86c6e8, #86c6e8), linear-gradient(270deg, #cee9f8, transparent 2px), linear-gradient(180deg, #86c6e8, #cee9f8 2px, #cee9f8 4px, transparent 4px), linear-gradient(0deg, #86c6e8, #86c6e8 4px, transparent 4px), linear-gradient(225deg, #cee9f8 8.5px, transparent 8.5px, transparent), linear-gradient(270deg, transparent 8px, #86c6e8 8px, #86c6e8), linear-gradient(135deg, transparent 8px, black 8px, black 10px, #b6b6b6 14px, transparent 14px), #86c6e8;
+	background-position: 0px 0px, 12px 8px, center, center, center, center, center, center;
+	background-size: 8px 8px, 2px 2px, contain, contain, contain, contain, contain, contain, contain;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+}
+
+.page-utils ::-webkit-scrollbar-corner, .page-utils::-webkit-scrollbar-corner {
+	background-color: #efefef;
+}
+
+.page-utils ::-webkit-scrollbar-thumb, .page-utils::-webkit-scrollbar-thumb {
+	background-color: #cecdd1;
+	background: linear-gradient(90deg, #f5f5f5, #eaeaec 50%, #d9d9db 50%, #c0bfc3);
+	border: none;
+	border-right: 1px solid transparent;
+	border-radius: 2px 3px 3px 2px;
+	box-shadow: inset #989898 0px 0px 0px 1px, inset #e4e5e766 0px 0px 0px 2px, inset #f9f9f9 0px -1px 0px 1px, inset #f9f9f9 0px 1px 0px 1px;
+	background-clip: padding-box;
+
+	background-image: repeating-linear-gradient(160deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		repeating-linear-gradient(160deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		repeating-linear-gradient(160deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		linear-gradient(90deg, #f5f5f5, #eaeaec 50%, #d9d9db 50%, #c0bfc3);
+	background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+	background-position: center, left 4px top calc(50% - 3px), left 4px top calc(50% + 3px), left;
+	background-size: 7px 2px, 7px 2px, 7px 2px, auto;
+}
+.page-utils ::-webkit-scrollbar-thumb:hover, .page-utils::-webkit-scrollbar-thumb:hover {
+	box-shadow: inset #3c7fb1 0px 0px 0px 1px, inset #e4e5e766 0px 0px 0px 2px, inset #f9f9f9 0px -1px 0px 1px, inset #f9f9f9 0px 1px 0px 1px;
+	background-image: repeating-linear-gradient(160deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		repeating-linear-gradient(160deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		repeating-linear-gradient(160deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		linear-gradient(90deg, #eaf6fd, #e5f4fd 50%, #b3e0f9 50%, #b3e0f9);
+}
+.page-utils ::-webkit-scrollbar-thumb:active, .page-utils::-webkit-scrollbar-thumb:active {
+	box-shadow: inset #6d91ab 0px 0px 0px 1px, inset #e4e5e766 0px 0px 0px 2px, inset #f9f9f9 0px -1px 0px 1px, inset #f9f9f9 0px 1px 0px 1px;
+	background-image: repeating-linear-gradient(160deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		repeating-linear-gradient(160deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		repeating-linear-gradient(160deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		linear-gradient(90deg, #cee9f8, #cee9f8 50%, #86c6e8 50%, #86c6e8);
+}
+
+.page-utils ::-webkit-scrollbar-thumb:horizontal, .page-utils::-webkit-scrollbar-thumb:horizontal {
+	background: linear-gradient(0deg, #f5f5f5, #eaeaec 50%, #d9d9db 50%, #c0bfc3);
+	border-right: none;
+	border-bottom: 1px solid transparent;
+	border-radius: 2px 2px 3px 3px;
+	box-shadow: inset #989898 0px 0px 0px 1px, inset #e4e5e766 0px 0px 0px 2px, inset #f9f9f9 -1px 0px 0px 1px, inset #f9f9f9 1px 0px 0px 1px;
+	background-clip: padding-box;
+
+	background-image: repeating-linear-gradient(110deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		repeating-linear-gradient(110deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		repeating-linear-gradient(110deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		linear-gradient(180deg, #f5f5f5, #eaeaec 50%, #d9d9db 50%, #c0bfc3);
+	background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+	background-position: center, left calc(50% - 3px) top 4px, left calc(50% + 3px) top 4px, left;
+	background-size: 2px 7px, 2px 7px, 2px 7px, auto;
+}
+.page-utils ::-webkit-scrollbar-thumb:horizontal:hover, .page-utils::-webkit-scrollbar-thumb:horizontal:hover {
+	box-shadow: inset #3c7fb1 0px 0px 0px 1px, inset #e4e5e766 0px 0px 0px 2px, inset #f9f9f9 -1px 0px 0px 1px, inset #f9f9f9 1px 0px 0px 1px;
+	background-image: repeating-linear-gradient(110deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		repeating-linear-gradient(110deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		repeating-linear-gradient(110deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		linear-gradient(180deg, #eaf6fd, #e5f4fd 50%, #b3e0f9 50%, #b3e0f9);
+}
+.page-utils ::-webkit-scrollbar-thumb:horizontal:active, .page-utils::-webkit-scrollbar-thumb:horizontal:active {
+	box-shadow: inset #6d91ab 0px 0px 0px 1px, inset #e4e5e766 0px 0px 0px 2px, inset #f9f9f9 -1px 0px 0px 1px, inset #f9f9f9 1px 0px 0px 1px;
+	background-image: repeating-linear-gradient(110deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		repeating-linear-gradient(110deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		repeating-linear-gradient(110deg, #3b3a3a, #b0afaf 3px, #b0afaf),
+		linear-gradient(180deg, #cee9f8, #cee9f8 50%, #86c6e8 50%, #86c6e8);
+}
+
+.page-utils ::-webkit-scrollbar-track, .page-utils::-webkit-scrollbar-track {
+	background-color: #efefef;
+	background: linear-gradient(90deg, hsl(0 0% 75% / 1), #efefef 2px, #efefef 50%, transparent 50%),
+		linear-gradient(-90deg, hsl(0 0% 75% / 1), #efefef 1px);
+}
+
+.page-utils ::-webkit-scrollbar-track:horizontal, .page-utils::-webkit-scrollbar-track:horizontal {
+	background: linear-gradient(180deg, hsl(0 0% 75% / 1), #efefef 2px, #efefef 50%, transparent 50%),
+		linear-gradient(0deg, hsl(0 0% 75% / 1), #efefef 1px);
+}
+
+.page-utils ::-webkit-scrollbar-track-piece, .page-utils::-webkit-scrollbar-track-piece {}
