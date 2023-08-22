@@ -7,6 +7,10 @@
 	background: radial-gradient(circle at 15% 65%, #8cedfa 0%, transparent 45%),
 		radial-gradient(circle at 50% 50%, #30b7f1 0%, transparent 80%),
 		#0444a5;
+	--arrow: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB2SURBVDhPtZIBCsAgCEWri2+7WTtZ86sZLApr7IGk5VeLwi+UUk6Yhn5UWBkWSLoamnxItACE3KvhGxuJkm9kPZpDiW/hjEwmE8HhrTVYnGKMcC4ETm5dG6gmRQ3fnSsk2HvtCgSiM4YFuk+y8QY96Djr+pEQHmvZ7DE5EOQLAAAAAElFTkSuQmCC");
+}
+.page-utils.open {
+	overflow-y: auto;
 }
 
 .page-utils .pageMarker {
@@ -177,7 +181,6 @@
 .page-utils ._windowExplorerArrows {
 	position: relative;
 	width: 52px;
-	--arrow: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB2SURBVDhPtZIBCsAgCEWri2+7WTtZ86sZLApr7IGk5VeLwi+UUk6Yhn5UWBkWSLoamnxItACE3KvhGxuJkm9kPZpDiW/hjEwmE8HhrTVYnGKMcC4ETm5dG6gmRQ3fnSsk2HvtCgSiM4YFuk+y8QY96Djr+pEQHmvZ7DE5EOQLAAAAAElFTkSuQmCC");
 }
 .page-utils ._windowExplorerArrows * {
 	position: absolute;
@@ -641,3 +644,67 @@
 }
 
 .page-utils ::-webkit-scrollbar-track-piece {}
+
+
+.page-utils ._controlPanel {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(90deg, hsla(0, 0%, 100%, .4), rgba(0, 0, 0, .1), hsla(0, 0%, 100%, .2)), linear-gradient(55deg, transparent, rgba(0, 0, 0, .1) 20%, rgba(0, 0, 0, .1) 50%, transparent 53%), #4580c4;
+	box-shadow: inset 0 0.5px #fff;
+	height: 42px;
+	border: 1px solid rgba(0, 0, 0, .7);
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	padding-left: 8px;
+}
+.page-utils ._winBtn {
+	position: relative;
+	background-color: #b7c4d5;
+	border: none;
+	padding: 0;
+	margin-right: 16px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: linear-gradient(hsla(0, 0%, 100%, .5), hsla(0, 0%, 100%, .3) 45%, rgba(0, 0, 0, .1) 50%, rgba(0, 0, 0, .1) 75%, hsla(0, 0%, 100%, .9)) #9eb4cc;
+    box-shadow: inset 0 -1px 0 #414141, inset 1px 1px 3px -1px #fff, inset -1px 1px 3px -1px #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(#b6c5eb, #4168a1 45%, #010d4c 50%, #026eb7 75%, #91ffff);
+}
+.page-utils ._winBtn:hover, .page-utils ._winBtn:focus-visible {
+	background: radial-gradient(circle at bottom,#2aceda,transparent 50%), linear-gradient(#b6c5eb, #4168a1 45%, #010d4c 50%, #026eb7 75%, #91ffff);
+    box-shadow: 0 0 15px #026eb7, inset 0 -1px 0 #414141, inset 1px 1px 3px -1px #fff, inset -1px 1px 3px -1px #fff;
+	outline: none;
+}
+.page-utils ._winBtn svg {
+	position: absolute;
+	inset: 0;
+}
+.page-utils ._winBtn:hover svg:first-child, .page-utils ._winBtn:focus-visible svg:first-child {
+	filter: blur(2px) saturate(5) brightness(5);
+}
+.page-utils ._appBtn {
+	padding: 0 16px;
+	height: calc(100% - 2px);
+	margin: 0;
+	background-color: transparent;
+	border: 1px solid transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2px;
+}
+.page-utils ._appBtn img {
+	height: 28px;
+}
+
+.page-utils ._appBtn:hover, .page-utils ._appBtn:focus-visible, .page-utils ._appBtn_active {
+	background: radial-gradient(circle at top left, #d0dce7 0%, #8aa5c5 70%);
+	box-shadow: inset 0 0 1px 0.5px #fff;
+	border-color: #374b5f;
+}
