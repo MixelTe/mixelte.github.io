@@ -8,6 +8,7 @@
 		radial-gradient(circle at 50% 50%, #30b7f1 0%, transparent 80%),
 		#0444a5;
 	--arrow: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB2SURBVDhPtZIBCsAgCEWri2+7WTtZ86sZLApr7IGk5VeLwi+UUk6Yhn5UWBkWSLoamnxItACE3KvhGxuJkm9kPZpDiW/hjEwmE8HhrTVYnGKMcC4ETm5dG6gmRQ3fnSsk2HvtCgSiM4YFuk+y8QY96Djr+pEQHmvZ7DE5EOQLAAAAAElFTkSuQmCC");
+	font: 9pt Segoe UI, sans-serif;
 }
 .page-utils.open {
 	overflow-y: auto;
@@ -352,7 +353,7 @@
 	border: 1px solid transparent;
 	background: transparent;
 	font: inherit;
-	cursor: pointer;
+	cursor: default;
 	border-radius: 2px;
 	padding: 2px;
 	padding-left: 4px;
@@ -663,7 +664,7 @@
 .page-utils ._winBtn {
 	position: relative;
 	background-color: #b7c4d5;
-	border: none;
+	border: 1px solid rgba(0, 0, 0, 0.3);
 	padding: 0;
 	margin-right: 16px;
 	width: 40px;
@@ -685,11 +686,16 @@
 	position: absolute;
 	inset: 0;
 }
+.page-utils ._winBtn:hover svg:first-child, .page-utils ._winBtn:focus-visible svg:last-child {
+	filter: saturate(5) brightness(5);
+}
 .page-utils ._winBtn:hover svg:first-child, .page-utils ._winBtn:focus-visible svg:first-child {
+	transform: scale(1.1);
 	filter: blur(2px) saturate(5) brightness(5);
 }
-.page-utils ._appBtn {
-	padding: 0 16px;
+.page-utils ._controlBtn {
+	min-width: 24px;
+	padding: 0;
 	height: calc(100% - 2px);
 	margin: 0;
 	background-color: transparent;
@@ -698,13 +704,34 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: 2px;
+	color: white;
+	font: inherit;
+	outline: none;
+}
+.page-utils ._controlBtn img {
+	height: 16px;
+}
+.page-utils ._controlBtn:hover, .page-utils ._controlBtn:focus-visible, .page-utils ._controlBtn_active {
+	background: radial-gradient(circle at top left, #d0dce7 0%, #8aa5c5 70%);
+	box-shadow: inset 0 0 1px 0.5px #fff;
+	border-color: #374b5f;
+}
+.page-utils ._appBtn {
+	width: 58px;
 }
 .page-utils ._appBtn img {
 	height: 28px;
 }
-
-.page-utils ._appBtn:hover, .page-utils ._appBtn:focus-visible, .page-utils ._appBtn_active {
-	background: radial-gradient(circle at top left, #d0dce7 0%, #8aa5c5 70%);
-	box-shadow: inset 0 0 1px 0.5px #fff;
-	border-color: #374b5f;
+.page-utils ._controlBtnDate {
+	flex-direction: column;
+	padding: 0 8px;
+}
+.page-utils ._controlBtn:last-child {
+	height: 100%;
+	min-width: 14px;
+	width: 14px;
+	filter: brightness(0.8) contrast(1.2);
+}
+.page-utils ._controlBtn:last-child:hover, .page-utils ._controlBtn:last-child:focus-visible {
+	filter: brightness(0.9) contrast(1.2);
 }

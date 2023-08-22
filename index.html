@@ -421,9 +421,29 @@
 						<path d="M9 9 q 5 4 10 0 l-2 8 q -5 4 -10 -2" fill="url(#grad4)"/>
 					</svg>
 				</button>
-				<button class="_appBtn _appBtn_active"><img src="./imgs/win/explorer_lg.png"></button>
-				<button class="_appBtn"><img src="./imgs/win/icon.png"></button>
+				<button class="_controlBtn _appBtn _controlBtn_active"><img src="./imgs/win/explorer_lg.png"></button>
+				<button class="_controlBtn _appBtn"><img src="./imgs/win/icon.png"></button>
+				<div style="flex-grow: 1;"></div>
+				<button class="_controlBtn" id="langSwitch"></button>
+				<button class="_controlBtn"><span class="_explorerArrow" style="transform: rotate(-90deg);"></span></button>
+				<button class="_controlBtn"><img src="./imgs/win/sound.png" style="opacity: 0.9;"></button>
+				<button class="_controlBtn"><img src="./imgs/win/net.png"></button>
+				<button class="_controlBtn _controlBtnDate">
+					<div>18:38</div>
+					<div>22.08.2023</div>
+				</button>
+				<button class="_controlBtn _controlBtn_active"></button>
 			</div>
+			<script>
+				{
+					const d = new Date();
+					const toTwo = v => v < 10 ? `0${v}` : `${v}`;
+					const el1 = document.querySelector("._controlBtnDate :first-child");
+					el1.innerText = `${toTwo(d.getHours())}:${toTwo(d.getMinutes())}`
+					const el2 = document.querySelector("._controlBtnDate :last-child");
+					el2.innerText = `${toTwo(d.getDate())}.${toTwo(d.getMonth() + 1)}.${d.getFullYear()}`
+				}
+			</script>
 		</div>
 	</div>
 	<div class="page page-other" id="page_other">

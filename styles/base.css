@@ -47,10 +47,10 @@ a {
 	cursor: pointer;
 	padding: 0;
 }
-.title button::before {
+button#langSwitch::before {
 	content: "EN";
 }
-.lang-ru .title button::before {
+.lang-ru button#langSwitch::before {
 	content: "RU";
 }
 
