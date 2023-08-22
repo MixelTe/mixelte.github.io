@@ -253,7 +253,7 @@
 	<div class="page page-utils" id="page_utils">
 		<div class="content">
 			<div class="pageMarker card" id="pageMarker_utils">Utils</div>
-			<div class="_window">
+			<div class="_window _windowMain">
 				<div class="_windowBar _windowBar_large">
 					<div>
 						<div class="_windowBarText"></div>
@@ -392,9 +392,11 @@
 				<div class="_windowBar">
 					<div class="_windowBarText"><img src="./imgs/win/notepad.png"><span class="en">Untitled - Notepad</span><span class="ru">Безымянный - Блокнот</span></div>
 					<div class="_windowBarControls">
-						<button aria-label="Minimize" id="back_utils"></button>
-						<button aria-label="Maximize" onclick="document.fullscreen ? document.exitFullscreen() : document.body.requestFullscreen()"></button>
-						<button aria-label="Close" id="back_utils"></button>
+						<a aria-label="Minimize" href="#"></a>
+						<label aria-label="Maximize">
+							<input type="checkbox" id="utils_miximize">
+						</label>
+						<a aria-label="Close" href="#"></a>
 					</div>
 				</div>
 				<div class="_toolbar">
@@ -407,9 +409,36 @@
 							<li><button class="_mi"><span class="en">Save</span><span class="ru">Сохранить</span> <span>CTRL+S</span></button></li>
 							<li class="_mid"><button class="_mi"><span class="en">Save as...</span><span class="ru">Сохранить как...</span> <span>CTRL+SHIFT+N</span></button></li>
 							<li><button class="_mi"><span class="en">Page parametrs...</span><span class="ru">Параметры страницы...</span></button></li>
-							<li class="_mid"><button class="_mi"><span class="en">Print...</span><span class="ru">Печать...</span> <span>CTRL+P</span></button></li>
-							<li><button class="_mi"><span class="en">Quit</span><span class="ru">Выход</span></button></li>
+							<li class="_mid"><button class="_mi" id="utils_print"><span class="en">Print...</span><span class="ru">Печать...</span> <span>CTRL+P</span></button></li>
+							<li><a class="_mi" href="#"><span class="en">Quit</span><span class="ru">Выход</span></a></li>
 						</ul>
+						<script>
+							document.getElementById("utils_print").addEventListener("click", () => {
+								const toolbar = document.querySelector("._windowProject ._toolbar");
+								toolbar.style.display = "none";
+								const project = document.querySelector("._windowProject");
+								project.style.position = "fixed";
+								project.style.inset = "-32px -25px -30px -10px";
+								project.style.zIndex = "9999";
+								project.style.transform = "none";
+								project.style.maxWidth = "200%";
+								project.style.maxHeight = "200%";
+								project.style.width = "auto";
+								setTimeout(() => {
+									print()
+								}, 1);
+								setTimeout(() => {
+									toolbar.style.display = "";
+									project.style.position = "";
+									project.style.inset = "";
+									project.style.zIndex = "";
+									project.style.transform = "";
+									project.style.maxWidth = "";
+									project.style.maxHeight = "";
+									project.style.width = "";
+								}, 250);
+							});
+						</script>
 					</div>
 					<div>
 						<button><span class="en">Edit</span><span class="ru">Правка</span></button>
@@ -466,7 +495,38 @@
 					</div>
 				</div>
 				<div class="_windowBody">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repellendus neque voluptas omnis perspiciatis sit, possimus molestiae ea. Beatae dolorum, ab tenetur est laudantium nesciunt omnis neque ullam eaque tempora.
+					<div class="_project" id="util1">
+						Util 1
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium repellendus alias. Mollitia iure enim pariatur perspiciatis hic blanditiis, laudantium quos cum, beatae, exercitationem quaerat molestiae itaque odit minus facere.
+					</div>
+					<div class="_project" id="util2">
+						Util 2
+					</div>
+					<div class="_project" id="util3">
+						Util 3
+					</div>
+					<div class="_project" id="util4">
+						Util 4
+					</div>
+					<div class="_project" id="util5">
+						Util 5
+					</div>
 				</div>
 				<div class="_statusBar">
 					<div><span class="en">Ln 3, Col 37</span><span class="ru">Стр 3, стлб 37</span></div>
@@ -508,8 +568,8 @@
 						<path d="M9 9 q 5 4 10 0 l-2 8 q -5 4 -10 -2" fill="url(#grad4)"/>
 					</svg>
 				</button>
-				<button class="_controlBtn _appBtn _controlBtn_active"><img src="./imgs/win/explorer_lg.png"></button>
-				<button class="_controlBtn _appBtn"><img src="./imgs/win/notepad_lg.png"></button>
+				<a class="_controlBtn _appBtn _controlBtn_explorer" href="#"><img src="./imgs/win/explorer_lg.png"></a>
+				<button class="_controlBtn _appBtn _controlBtn_notepad"><img src="./imgs/win/notepad_lg.png"></button>
 				<div style="flex-grow: 1;"></div>
 				<button class="_controlBtn" id="langSwitch"></button>
 				<button class="_controlBtn"><span class="_explorerArrow" style="transform: rotate(-90deg);"></span></button>
