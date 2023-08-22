@@ -15,7 +15,7 @@ const page_index = document.getElementById("page_index");
 const elements = pages.map(id => ({
 	page: document.getElementById("page_" + id),
 	marker: document.getElementById("pageMarker_" + id),
-	back: document.getElementById("back_" + id),
+	back: document.querySelectorAll(`#back_${id}`),
 	state: States.normal,
 	size: NormalSize,
 	pos: { x: 0, y: 0 },
@@ -47,7 +47,7 @@ elements.forEach((el, i) =>
 			window.history.replaceState(null, '', url.toString());
 		}
 	});
-	el.back.addEventListener("click", () =>
+	el.back.forEach(btn => btn.addEventListener("click", () =>
 	{
 		el.state = States.closing;
 		el.page.classList.remove("open");
@@ -59,7 +59,7 @@ elements.forEach((el, i) =>
 			url.searchParams.delete("p");
 			window.history.replaceState(null, '', url.toString());
 		}
-	});
+	}));
 });
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -80,6 +80,7 @@ if (pages.includes(page))
 updateClip();
 function updateClip()
 {
+	const anyOpen = elements.some(el => el.state == States.open);
 	elements.forEach(el =>
 	{
 		// const { x, y } = el.marker.getBoundingClientRect();
@@ -87,8 +88,11 @@ function updateClip()
 		const { w, h } = el.markerSize;
 		const screenSize = Math.max(window.innerWidth, window.innerHeight) * Math.SQRT2;
 		const dx = page_index.clientWidth >= 800 ? (page_index.clientWidth - 800) / 2 : 0;
-		el.page.style.clipPath = `circle(${el.size}px at ${x + w / 2 + dx}px ${y + h / 2}px)`;
-		// el.page.style.clipPath = `circle(90px at ${x + 65 + (window.innerWidth - 800) / 2}px ${y + 65}px)`;
+		if (!anyOpen)
+		{
+			el.page.style.clipPath = `circle(${el.size}px at ${x + w / 2 + dx}px ${y + h / 2}px)`;
+			// el.page.style.clipPath = `circle(90px at ${x + 65 + (window.innerWidth - 800) / 2}px ${y + 65}px)`;
+		}
 		if (el.state == States.hover)
 		{
 			el.size += 5;

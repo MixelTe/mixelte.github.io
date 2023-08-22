@@ -258,13 +258,13 @@
 					<div>
 						<div class="_windowBarText"></div>
 						<div class="_windowBarControls">
-							<button aria-label="Minimize"></button>
-							<button aria-label="Maximize"></button>
+							<button aria-label="Minimize" id="back_utils"></button>
+							<button aria-label="Maximize" onclick="document.fullscreen ? document.exitFullscreen() : document.body.requestFullscreen()"></button>
 							<button aria-label="Close" id="back_utils"></button>
 						</div>
 					</div>
 					<div>
-						<div class="_windowExplorerArrows"><button></button><button disabled></button></div>
+						<div class="_windowExplorerArrows"><button id="back_utils"></button><button disabled></button></div>
 						<div class="_windowExplorer">
 							<img src="./imgs/win/folder.png">
 							<div class="_explorerArrow"></div>
@@ -290,27 +290,27 @@
 					<button><img src="./imgs/win/layout.png"></button>
 					<button><img src="./imgs/win/help.png"></button>
 				</div>
-				<div class="_windowBody _np">
+				<div class="_windowBody _windowBody_explorer">
 					<div class="_explorer">
 						<div class="_folders">
 							<ul>
-								<a class="_li" href="#"><img src="imgs/win/favorite.png"><span class="en">Favorites</span><span class="ru">Избранное</span></a>
-								<a class="_li" href="#"><img src="imgs/win/desktop.png"><span class="en">Desktop</span><span class="ru">Рабочий стол</span></a>
+								<button class="_li" id="back_utils"><img src="imgs/win/favorite.png"><span class="en">Favorites</span><span class="ru">Избранное</span></button>
+								<a class="_li" href="https://github.com/MixelTe" target="_blank"><img src="imgs/win/desktop.png"><span class="en">Desktop</span><span class="ru">Рабочий стол</span></a>
 								<a class="_li" href="#"><img src="imgs/win/downloads.png"><span class="en">Downloads</span><span class="ru">Загрузки</span></a>
 								<!-- <a class="_li" href="#"><img src="imgs/win/">Lorem</a> -->
 							</ul>
 							<ul>
-								<a class="_li" href="#"><img src="imgs/win/explorer.png"><span class="en">Libraries</span><span class="ru">Библиотеки</span></a>
-								<a class="_li" href="#"><img src="imgs/win/document.png"><span class="en">Documents</span><span class="ru">Документы</span></a>
-								<a class="_li" href="#"><img src="imgs/win/music.png"><span class="en">Music</span><span class="ru">Музыка</span></a>
-								<a class="_li" href="#"><img src="imgs/win/picture.png"><span class="en">Pictures</span><span class="ru">Картинки</span></a>
-								<a class="_li" href="#"><img src="imgs/win/video.png"><span class="en">Videos</span><span class="ru">Видео</span></a>
+								<button class="_li"><img src="imgs/win/explorer.png"><span class="en">Libraries</span><span class="ru">Библиотеки</span></button>
+								<button class="_li"><img src="imgs/win/document.png"><span class="en">Documents</span><span class="ru">Документы</span></button>
+								<button class="_li"><img src="imgs/win/music.png"><span class="en">Music</span><span class="ru">Музыка</span></button>
+								<button class="_li"><img src="imgs/win/picture.png"><span class="en">Pictures</span><span class="ru">Картинки</span></button>
+								<button class="_li"><img src="imgs/win/video.png"><span class="en">Videos</span><span class="ru">Видео</span></button>
 							</ul>
 							<ul>
-								<a class="_li" href="#"><img src="imgs/win/computer.png"><span class="en">Computer</span><span class="ru">Компьютер</span></a>
-								<a class="_li" href="#"><img src="imgs/win/drive_win.png"><span class="en">Local Disk (C:)</span><span class="ru">Локальный диск (C:)</span></a>
-								<a class="_li" href="#"><img src="imgs/win/drive.png"><span class="en">Local Disk (D:)</span><span class="ru">Локальный диск (D:)</span></a>
-								<a class="_li" href="#"><img src="imgs/win/drive.png"><span class="en">Local Disk (E:)</span><span class="ru">Локальный диск (E:)</span></a>
+								<button class="_li"><img src="imgs/win/computer.png"><span class="en">Computer</span><span class="ru">Компьютер</span></button>
+								<button class="_li"><img src="imgs/win/drive_win.png"><span class="en">Local Disk (C:)</span><span class="ru">Локальный диск (C:)</span></button>
+								<button class="_li _li_hov"><img src="imgs/win/drive.png"><span class="en">Local Disk (D:)</span><span class="ru">Локальный диск (D:)</span></button>
+								<button class="_li"><img src="imgs/win/drive.png"><span class="en">Local Disk (E:)</span><span class="ru">Локальный диск (E:)</span></button>
 							</ul>
 						</div>
 						<div class="_projects">
