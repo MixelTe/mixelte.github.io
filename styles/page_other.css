@@ -1,0 +1,174 @@
+.page-other {
+	background: radial-gradient(at 35% 95%, rgba(255,71,155,0.3) 0%, transparent 26%),
+            radial-gradient(at 90% 60%, rgba(255,219,37,0.24) 0%, transparent 26%),
+            radial-gradient(at 10% 10%, rgba(255,0,224,0.32) 0%, transparent 33%),
+            linear-gradient(90deg, #eeceff 0%, #ffb0b0 100%);
+}
+.page-other .card {
+	--gradient: linear-gradient(45deg, #ffbb00 0%, #f100ff 100%);
+}
+.page-other .pageMarker {
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	border-radius: 50%;
+	color: #f6b8da;
+	box-shadow: inset 0 0 10px 2px #faa2ff,  0 0 15px 4px #f883cf;
+	transition: scale 250ms;
+}
+.page-other.open .pageMarker {
+	scale: 0;
+}
+.page-other ._back {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	background: radial-gradient(circle at 50% 50%, rgba(255, 60, 60, 0.5) 0%, transparent 26%);
+	background-size: 100%;
+	background-position: 50%;
+	transform: translate(-50%, -50%);
+	animation: other_background1 15s infinite linear;
+}
+.page-other ._back:nth-child(2) {
+	background: radial-gradient(circle at 50% 50%, rgba(89, 60, 255, 0.5) 0%, transparent 18%);
+	animation: other_background2 25s infinite linear;
+}
+.page-other ._back:nth-child(3) {
+	width: 200%;
+	height: 200%;
+	background: radial-gradient(circle at 50% 50%, rgba(239, 255, 11, 0.5) 0%, transparent 15%);
+	animation: other_background3 20s infinite linear;
+}
+
+@keyframes other_background1 {
+	0%, 100% {
+		top: 70%;
+		left: 0%;
+		background-size: 100%;
+	}
+	25% {
+		top: 0%;
+		left: 50%;
+		background-size: 150%;
+	}
+	50% {
+		top: 40%;
+		left: 100%;
+		background-size: 75%;
+	}
+	75% {
+		top: 80%;
+		left: 50%;
+		background-size: 150%;
+	}
+}
+@keyframes other_background2 {
+	0%, 100% {
+		top: 100%;
+		left: 70%;
+		background-size: 150%;
+	}
+	25% {
+		top: 40%;
+		left: 50%;
+		background-size: 100%;
+	}
+	50% {
+		top: 90%;
+		left: 30%;
+		background-size: 150%;
+	}
+	75% {
+		top: 10%;
+		left: 10%;
+		background-size: 75%;
+	}
+}
+@keyframes other_background3 {
+	0%, 100% {
+		top: 10%;
+		left: 30%;
+		background-size: 150%;
+	}
+	25% {
+		top: 40%;
+		left: 20%;
+		background-size: 100%;
+	}
+	50% {
+		top: 90%;
+		left: 10%;
+		background-size: 150%;
+	}
+	75% {
+		top: 40%;
+		left: 0%;
+		background-size: 200%;
+	}
+}
+
+.page-other #langSwitch {
+	right: 2rem;
+	border: none;
+	border-radius: 0.5rem;
+	padding: 0.2rem 0.4rem;
+	font-weight: bold;
+	box-shadow: 0 0 5px 5px blue, inset 0 0 5px 2px blue;
+}
+
+.page-other ._projects  {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 4rem;
+}
+.page-other ._projects .card {
+	--r: 1.5rem;
+}
+.page-other ._projects .card > div {
+	padding: 1em 2em;
+	padding-left: 1em;
+	display: grid;
+	grid-template-columns: 25% auto;
+	gap: 1em;
+}
+.page-other ._projects ._img img {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	border-radius: 0.5rem;
+}
+.page-other ._cardBody {
+	display: flex;
+	flex-direction: column;
+}
+.page-other ._cardBody > * {
+	margin: 0;
+	margin-bottom: 0.5em;
+}
+.page-other ._cardBody p {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.page-other ._cardBody h1 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+.page-other ._cardBody h1 span:last-child {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.page-other ._cardBody h1 img {
+	height: 2.8rem;
+}
+.page-other ._cardBody h1 a:last-child img {
+	height: 2.4rem;
+}

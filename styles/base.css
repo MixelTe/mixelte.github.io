@@ -94,15 +94,6 @@ body:not(.lang-ru) .ru {
 	clip-path: none;
 	overflow-y: auto;
 }
-.page-other {
-	background: radial-gradient(at 35% 95%, rgba(255,71,155,0.3) 0%, transparent 26%),
-            radial-gradient(at 90% 60%, rgba(255,219,37,0.24) 0%, transparent 26%),
-            radial-gradient(at 10% 10%, rgba(255,0,224,0.32) 0%, transparent 33%),
-            linear-gradient(90deg, #eeceff 0%, #ffb0b0 100%);
-}
-.page-other .card {
-	--gradient: linear-gradient(45deg, #ffbb00 0%, #f100ff 100%);
-}
 
 .content {
 	position: relative;
