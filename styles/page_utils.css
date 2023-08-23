@@ -16,7 +16,7 @@
 
 .page-utils .pageMarker {
 	font-family: Segoe UI, sans-serif;
-	color: var(--c);
+	color: white;
 	z-index: 5;
 	display: flex;
 	align-items: center;
@@ -24,8 +24,10 @@
 	transition: scale 250ms;
 	position: absolute;
 	border-radius: 50%;
-	background: #f0f0f0;
-	border: 4px solid #8caed4;
+	background-color: #b7c4d5;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 -1px 0 #414141, inset 1px 1px 3px -1px #fff, inset -1px 1px 3px -1px #fff;
+	background: radial-gradient(circle at center, #6492e7 0%, transparent 55%), linear-gradient(#aac2ff, #0a47bb 45%, #0e0089 50%, #0a69bb 75%, #58ffe9);
 }
 .page-utils.open .pageMarker {
 	scale: 0;
