@@ -258,9 +258,9 @@
 					<div>
 						<div class="_windowBarText"></div>
 						<div class="_windowBarControls">
-							<button aria-label="Minimize" id="back_utils"></button>
-							<button aria-label="Maximize" onclick="document.fullscreen ? document.exitFullscreen() : document.body.requestFullscreen()"></button>
-							<button aria-label="Close" id="back_utils"></button>
+							<button class="_windowBarControl" aria-label="Minimize" id="back_utils"></button>
+							<button class="_windowBarControl" aria-label="Maximize" onclick="document.fullscreen ? document.exitFullscreen() : document.body.requestFullscreen()"></button>
+							<button class="_windowBarControl" aria-label="Close" id="back_utils"></button>
 						</div>
 					</div>
 					<div>
@@ -392,11 +392,11 @@
 				<div class="_windowBar">
 					<div class="_windowBarText"><img src="./imgs/win/notepad.png"><span class="en">Untitled - Notepad</span><span class="ru">Безымянный - Блокнот</span></div>
 					<div class="_windowBarControls">
-						<a aria-label="Minimize" href="#"></a>
-						<label aria-label="Maximize">
+						<a class="_windowBarControl" aria-label="Minimize" href="#"></a>
+						<label class="_windowBarControl" aria-label="Maximize">
 							<input type="checkbox" id="utils_miximize">
 						</label>
-						<a aria-label="Close" href="#"></a>
+						<a class="_windowBarControl" aria-label="Close" href="#"></a>
 					</div>
 				</div>
 				<div class="_toolbar">
@@ -534,11 +534,11 @@
 				<div class="_windowBar">
 					<div class="_windowBarText"><img src="./imgs/win/player.png"><span class="en">Windows Photo Viewer</span><span class="ru">Средство просмотра фотографий Windows</span></div>
 					<div class="_windowBarControls">
-						<a aria-label="Minimize" href="#"></a>
-						<label aria-label="Maximize">
+						<a class="_windowBarControl" aria-label="Minimize" href="#"></a>
+						<label class="_windowBarControl" aria-label="Maximize">
 							<input type="checkbox" id="utils_miximize">
 						</label>
-						<a aria-label="Close" href="#"></a>
+						<a class="_windowBarControl" aria-label="Close" href="#"></a>
 					</div>
 				</div>
 				<div class="_toolbar _toolbar_large">
@@ -552,14 +552,41 @@
 				</div>
 				<div class="_windowBody">
 					<div id="util1_img1">
-						<!-- <img src="./imgs/ScreensaverParticles/screenshot2.png" alt="screenshot" loading="lazy"> -->
-						<img src="./imgs/vertic.jpg" alt="screenshot" loading="lazy">
+						<img src="./imgs/ScreensaverParticles/screenshot2.png" alt="screenshot" loading="lazy">
+						<a class="_viewerExit _windowBarControl" href="#util1" aria-label="Close"></a>
+						<a class="_viewerBack _viewerBarArrow" href="#util1_img1"><img class="_fl" src="./imgs/win/next.png"></a>
+						<a class="_viewerNext _viewerBarArrow" href="#util1_img2"><img src="./imgs/win/next.png"></a>
 					</div>
-					<!-- <img src="./imgs/ScreensaverParticles/screenrecord.gif" alt="screenrecord" loading="lazy"> -->
-					<!-- <img src="./imgs/ScreensaverParticles/screenshot5.png" alt="screenshot" loading="lazy"> -->
-					<!-- <img src="./imgs/ScreensaverParticles/screenrecord2.gif" alt="screenrecord" loading="lazy"> -->
-					<!-- <img src="./imgs/ScreensaverParticles/screenshot3.png" alt="screenshot" loading="lazy"> -->
-					<!-- <img src="./imgs/ScreensaverParticles/screenshot4.png" alt="screenshot" loading="lazy"> -->
+					<div id="util1_img2">
+						<img src="./imgs/ScreensaverParticles/screenrecord.gif" alt="screenrecord" loading="lazy">
+						<a class="_viewerExit _windowBarControl" href="#util1" aria-label="Close"></a>
+						<a class="_viewerBack _viewerBarArrow" href="#util1_img1"><img class="_fl" src="./imgs/win/next.png"></a>
+						<a class="_viewerNext _viewerBarArrow" href="#util1_img3"><img src="./imgs/win/next.png"></a>
+					</div>
+					<div id="util1_img3">
+						<img src="./imgs/ScreensaverParticles/screenshot5.png" alt="screenshot" loading="lazy">
+						<a class="_viewerExit _windowBarControl" href="#util1" aria-label="Close"></a>
+						<a class="_viewerBack _viewerBarArrow" href="#util1_img2"><img class="_fl" src="./imgs/win/next.png"></a>
+						<a class="_viewerNext _viewerBarArrow" href="#util1_img4"><img src="./imgs/win/next.png"></a>
+					</div>
+					<div id="util1_img4">
+						<img src="./imgs/ScreensaverParticles/screenrecord2.gif" alt="screenrecord" loading="lazy">
+						<a class="_viewerExit _windowBarControl" href="#util1" aria-label="Close"></a>
+						<a class="_viewerBack _viewerBarArrow" href="#util1_img3"><img class="_fl" src="./imgs/win/next.png"></a>
+						<a class="_viewerNext _viewerBarArrow" href="#util1_img5"><img src="./imgs/win/next.png"></a>
+					</div>
+					<div id="util1_img5">
+						<img src="./imgs/ScreensaverParticles/screenshot3.png" alt="screenshot" loading="lazy">
+						<a class="_viewerExit _windowBarControl" href="#util1" aria-label="Close"></a>
+						<a class="_viewerBack _viewerBarArrow" href="#util1_img4"><img class="_fl" src="./imgs/win/next.png"></a>
+						<a class="_viewerNext _viewerBarArrow" href="#util1_img6"><img src="./imgs/win/next.png"></a>
+					</div>
+					<div id="util1_img6">
+						<img src="./imgs/ScreensaverParticles/screenshot4.png" alt="screenshot" loading="lazy">
+						<a class="_viewerExit _windowBarControl" href="#util1" aria-label="Close"></a>
+						<a class="_viewerBack _viewerBarArrow" href="#util1_img5"><img class="_fl" src="./imgs/win/next.png"></a>
+						<a class="_viewerNext _viewerBarArrow" href="#util1_img6"><img src="./imgs/win/next.png"></a>
+					</div>
 				</div>
 				<div class="_viewerBar">
 					<div>
@@ -612,6 +639,7 @@
 				</button>
 				<a class="_controlBtn _appBtn _controlBtn_explorer" href="#"><img src="./imgs/win/explorer_lg.png"></a>
 				<button class="_controlBtn _appBtn _controlBtn_notepad"><img src="./imgs/win/notepad_lg.png"></button>
+				<button class="_controlBtn _appBtn _controlBtn_viewer"><img src="./imgs/win/player_lg.png"></button>
 				<div style="flex-grow: 1;"></div>
 				<button class="_controlBtn" id="langSwitch"></button>
 				<button class="_controlBtn"><span class="_explorerArrow" style="transform: rotate(-90deg);"></span></button>
