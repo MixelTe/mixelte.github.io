@@ -13,6 +13,7 @@
 	<script src="./scripts/pageSwitch.js" defer></script>
 	<script src="./scripts/markerAnim.js" defer></script>
 	<script src="./scripts/langSwitch.js" defer></script>
+	<script src="./scripts/transformFix.js" defer></script>
 </head>
 <body>
 	<div class="page page-index" id="page_index">
@@ -597,11 +598,33 @@
 							<button class="_winBtn"><img src="./imgs/win/picture.png"></button>
 							<button class="_viewerBarArrow"><img src="./imgs/win/next.png"></button>
 						</div>
-						<button class="_viewerBarBtn"><img src="./imgs/win/flip.png"></button>
-						<button class="_viewerBarBtn"><img class="_fl" src="./imgs/win/flip.png"></button>
+						<button class="_viewerBarBtn" id="utils_viewer_rotate_left"><img src="./imgs/win/flip.png"></button>
+						<button class="_viewerBarBtn" id="utils_viewer_rotate_right"><img class="_fl" src="./imgs/win/flip.png"></button>
 						<div class="_viewerBarLine"></div>
 						<button class="_viewerBarBtn"><img src="./imgs/win/cross.png"></button>
 					</div>
+					<script>
+						{
+							const btnLeft = document.getElementById("utils_viewer_rotate_left");
+							const btnRight = document.getElementById("utils_viewer_rotate_right");
+							const viewer = document.querySelector("._windowViewer ._windowBody");
+							let rotation = 0
+							btnLeft.addEventListener("click", () => {
+								rotation -= 1;
+								rotation = (rotation + 4) % 4;
+								viewer.style.setProperty("--img-height", viewer.clientHeight + "px");
+								viewer.style.setProperty("--img-width", viewer.clientWidth + "px");
+								viewer.setAttribute("data-img-rotation", rotation);
+							});
+							btnRight.addEventListener("click", () => {
+								rotation += 1;
+								rotation %= 4;
+								viewer.style.setProperty("--img-height", viewer.clientHeight + "px");
+								viewer.style.setProperty("--img-width", viewer.clientWidth + "px");
+								viewer.setAttribute("data-img-rotation", rotation);
+							});
+						}
+					</script>
 				</div>
 			</div>
 			<div class="_controlPanel">
