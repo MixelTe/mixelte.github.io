@@ -59,10 +59,10 @@
 	height: calc(var(--overlay-size) * 2);
 	transform: translate(-50%, -50%);
 	border-radius: 50%;
-	background: radial-gradient(circle at center, #d0f8fb 0, #110031 var(--overlay-size));
+	background: radial-gradient(circle at center, #d0f8fb 0%, #d0f8fb 40%, #110031 73%);
 	transition-duration: 1.5s;
 	transition-timing-function: cubic-bezier(0.59, 0.52, 0.27, -0.79);
 }
 .preloader_hide .preloader_overlay {
-	box-shadow: 0 0 30px 40px #110031;
+	box-shadow: 0 0 40px #110031;
 }
