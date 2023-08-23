@@ -78,9 +78,14 @@ if (pages.includes(page))
 }
 
 
-updateClip();
-function updateClip()
+updateClip(0);
+function updateClip(t)
 {
+	if (!markerAnimEnabled && t != 0)
+	{
+		requestAnimationFrame(updateClip);
+		return;
+	}
 	const anyOpen = elements.some(el => el.state == States.open);
 	elements.forEach(el =>
 	{

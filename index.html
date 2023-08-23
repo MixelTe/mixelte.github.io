@@ -27,10 +27,12 @@
 		</svg>
 		<div class="preloader_overlay"></div>
 		<script>
+			let markerAnimEnabled = false;
 			{
 				const preloader = document.querySelector(".preloader");
 				preloader.addEventListener("click", () => {
 					preloader.parentElement.removeChild(preloader);
+					markerAnimEnabled = true;
 				});
 				setTimeout(() => {
 					preloader.classList.add("preloader_run");
@@ -39,8 +41,10 @@
 					preloader.classList.add("preloader_hide");
 					const size = Math.max(window.innerWidth, window.innerHeight) * Math.SQRT2;
 					preloader.style.setProperty("--overlay-size", size + "px")
+					markerAnimEnabled = true;
 					setTimeout(() => {
 						preloader.parentElement?.removeChild(preloader);
+						markerAnimEnabled = true;
 					}, 1500);
 				}, 5000);
 			}
