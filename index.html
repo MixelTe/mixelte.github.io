@@ -13,7 +13,6 @@
 	<script src="./scripts/pageSwitch.js" defer></script>
 	<script src="./scripts/markerAnim.js" defer></script>
 	<script src="./scripts/langSwitch.js" defer></script>
-	<script src="./scripts/transformFix.js" defer></script>
 </head>
 <body>
 	<div class="page page-index" id="page_index">
@@ -337,7 +336,8 @@
 									<span class="ru">Снежинки</span>
 								</span>
 								<span data-utils-modDate="SnowFlakes">18.01.2023</span>
-								<span>Screensaver</span><span>143 730 KB</span>
+								<span><span class="en">Application</span><span class="ru">Приложение</span></span>
+								<span>143 730 KB</span>
 							</a>
 							<a class="_li" href="#util3">
 								<span>
@@ -437,7 +437,7 @@
 									project.style.maxWidth = "";
 									project.style.maxHeight = "";
 									project.style.width = "";
-								}, 250);
+								}, 1000);
 							});
 						</script>
 					</div>
@@ -497,13 +497,26 @@
 				</div>
 				<div class="_windowBody">
 					<div class="_project" id="util1">
-						<h1>Screensaver Particles</h1>
-						<p>Screensaver для <b>windows</b>, написанный на C#.</p>
-						<p>Рисует хаотично движущиеся точки, соединяющиеся между собой.</p>
-						<p>Может работать в <b>режиме часов</b>, тогда частицы формируют цифры текущего времени.</p>
-						<p>Множество параметров <b>можно настроить</b> в меню.</p>
-						<div><a href="https://github.com/MixelTe/ScreensaverParticles" target="_blank">Github</a></div>
-						<h1>Скриншоты</h1>
+						<h1 class="en">Screensaver Particles</h1>
+						<h1 class="ru">Screensaver Частицы</h1>
+
+						<div class="en">
+							<p>Screensaver for <b>windows</b>, written in C#.</p>
+							<p>Draws chaotically moving dots connecting to each other.</p>
+							<p>Can work in <b>clock mode</b>, then the particles form the digits of the current time.</p>
+							<p>Many parameters <b>can be customized</b> in the menu.</p>
+						</div>
+
+						<div class="ru">
+							<p>Screensaver для <b>windows</b>, написанный на C#.</p>
+							<p>Рисует хаотично движущиеся точки, соединяющиеся между собой.</p>
+							<p>Может работать в <b>режиме часов</b>, тогда частицы формируют цифры текущего времени.</p>
+							<p>Множество параметров <b>можно настроить</b> в меню.</p>
+						</div>
+
+						<q><a href="https://github.com/MixelTe/ScreensaverParticles" target="_blank">Github</a></q>
+						<h1 class="en">Screenshots</h1>
+						<h1 class="ru">Скриншоты</h1>
 						<p><a href="#util1_img1">screenshot</a></p>
 						<p><a href="#util1_img2">screenrecord</a></p>
 						<p><a href="#util1_img3">screenshot2</a></p>
@@ -512,16 +525,96 @@
 						<p><a href="#util1_img6">screenshot4</a></p>
 					</div>
 					<div class="_project" id="util2">
-						SnowFlakes
+						<h1 class="en">SnowFlakes</h1>
+						<h1 class="ru">Снежинки</h1>
+
+						<div class="en">
+							<p>Draws <b>snowflakes</b> falling over the screen.</p>
+							<p>By moving the mouse, you can <i>blow</i> the snowflakes away.</p>
+							<p>Snowflakes fall on top of everything <b>without disturbing</b> anything.</p>
+							<p>Over time, <b>snowdrifts</b> appear, which you can <i>shovel</i> with the mouse. (Can be turned off).</p>
+							<p>You can select any picture for snowflakes.</p>
+							<p>You can select an area where snowflakes will not be visible.</p>
+							<ul>
+								<li>Click on the icon -> Select area</li>
+								<li>Double click on the icon -> Clear area.</li>
+							</ul>
+							<p>Many parameters <b>can be customized</b> in the menu.</p>
+						</div>
+
+						<div class="ru">
+							<p>Рисует <b>снежинки</b>, падающие поверх экрана.</p>
+							<p>Двигая мышку, можно <i>сдувать</i> снежинки.</p>
+							<p>Снежинки падают поверх всего, ничему <b>не мешая</b>.</p>
+							<p>Со временем появляются <b>сугробы</b>, которые можно <i>разгребать</i> мышкой. (Можно отключить)</p>
+							<p>Для снежинок можно выбрать любую картинку.</p>
+							<p>Можно выделить область, где не будет видно снежинок.</p>
+							<ul>
+								<li>ЛКМ по иконке -> Выделение области</li>
+								<li>Двойной ЛКМ по иконке -> Очистить область</li>
+							</ul>
+							<p>Множество параметров <b>можно настроить</b> в меню.</p>
+						</div>
+
+						<q><a href="https://github.com/MixelTe/SnowFlakes" target="_blank">Github</a></q>
+						<h1 class="en">Screenshots</h1>
+						<h1 class="ru">Скриншоты</h1>
+						<p><a href="#util2_img1">screenshot</a></p>
+						<p><a href="#util2_img2">screenshot2</a></p>
 					</div>
 					<div class="_project" id="util3">
-						Screen Capture
+						<h1>Screen Capture</h1>
+						<q><a href="https://github.com/MixelTe/SnowFlakes" target="_blank">Github</a></q>
+
+						<div class="en">
+							<p>Capture screen zone and show it as floating topmost window.</p>
+							<div class="_br"></div>
+							<p>For <a href="#util3_img1">example</a>, you can cut a list from one place and move it closer to the workspace.</p>
+							<p>You can use <a href="#util3_img2">the palette</a> to manage all the images. There you can show/hide, close and move to the cursor any image.</p>
+							<p>The app is located on the taskbar. <a href="#util3_img3">App menu</a></p>
+							<p>You can change almost anything in the <a href="#util3_img4">settings</a>.</p>
+						</div>
+
+						<div class="ru">
+							<p>Сохраняет часть экрана и отображает её в виде окна поверх всего.</p>
+							<div class="_br"></div>
+							<p><a href="#util3_img1">Например</a>, вы можете вырезать какой-то список из одного места и переместить его поближе к рабочей области.</p>
+							<p>С помощью <a href="#util3_img2">палитры</a> вы можете управлять всеми изображениями. Там вы можете показывать/скрывать, закрывать и перемещать к курсору изображения.</p>
+							<p>Приложение размещено на панели задач. <a href="#util3_img3">Меню приложения</a></p>
+							<p><a href="#util3_img4">В настройках</a> можно изменить практически все, что угодно.</p>
+						</div>
 					</div>
 					<div class="_project" id="util4">
-						Formula Learner
+						<h1 class="en">Formula Learner</h1>
+						<h1 class="ru">Изучатель формул</h1>
+
+						<div class="en">
+							<p>A web application that helps you learn formulas.</p>
+							<p>Can display special symbols for physical formulas.</p>
+							<q><a href="https://github.com/MixelTe/physicsLearner" target="_blank">Github</a></q>
+							<q><a href="https://mixelte.github.io/physicsLearner" target="_blank">Open</a></q>
+						</div>
+
+						<div class="ru">
+							<p>Веб-приложение, помогающее изучать формулы.</p>
+							<p>Может отображать спец символы для физических формул</p>
+							<q><a href="https://github.com/MixelTe/physicsLearner" target="_blank">Github</a></q>
+							<q><a href="https://mixelte.github.io/physicsLearner" target="_blank">Открыть</a></q>
+						</div>
 					</div>
 					<div class="_project" id="util5">
-						Recipe Book
+						<h1 class="en">Recipe Book</h1>
+						<h1 class="ru">Книга рецептов</h1>
+						<div class="en">
+							<p>A website on Flask and Bootstrap for storing, viewing and searching recipes.</p>
+							<q><a href="https://github.com/MixelTe/RecipeBook" target="_blank">Github</a></q>
+							<q><a href="https://mixel.pythonanywhere.com" target="_blank">Open</a></q>
+						</div>
+						<div class="ru">
+							<p>Сайт на Flask и Bootstrap для хранения, просмотра и поиска рецептов.</p>
+							<q><a href="https://github.com/MixelTe/RecipeBook" target="_blank">Github</a></q>
+							<q><a href="https://mixel.pythonanywhere.com" target="_blank">Открыть</a></q>
+						</div>
 					</div>
 				</div>
 				<div class="_statusBar">
@@ -552,42 +645,61 @@
 					<button><img src="./imgs/win/help.png"></button>
 				</div>
 				<div class="_windowBody">
-					<div id="util1_img1">
-						<img src="./imgs/ScreensaverParticles/screenshot2.png" alt="screenshot" loading="lazy">
-						<a class="_viewerExit _windowBarControl" href="#util1" aria-label="Close"></a>
-						<a class="_viewerBack _viewerBarArrow" href="#util1_img1"><img class="_fl" src="./imgs/win/next.png"></a>
-						<a class="_viewerNext _viewerBarArrow" href="#util1_img2"><img src="./imgs/win/next.png"></a>
-					</div>
-					<div id="util1_img2">
-						<img src="./imgs/ScreensaverParticles/screenrecord.gif" alt="screenrecord" loading="lazy">
-						<a class="_viewerExit _windowBarControl" href="#util1" aria-label="Close"></a>
-						<a class="_viewerBack _viewerBarArrow" href="#util1_img1"><img class="_fl" src="./imgs/win/next.png"></a>
-						<a class="_viewerNext _viewerBarArrow" href="#util1_img3"><img src="./imgs/win/next.png"></a>
-					</div>
-					<div id="util1_img3">
-						<img src="./imgs/ScreensaverParticles/screenshot5.png" alt="screenshot" loading="lazy">
-						<a class="_viewerExit _windowBarControl" href="#util1" aria-label="Close"></a>
-						<a class="_viewerBack _viewerBarArrow" href="#util1_img2"><img class="_fl" src="./imgs/win/next.png"></a>
-						<a class="_viewerNext _viewerBarArrow" href="#util1_img4"><img src="./imgs/win/next.png"></a>
-					</div>
-					<div id="util1_img4">
-						<img src="./imgs/ScreensaverParticles/screenrecord2.gif" alt="screenrecord" loading="lazy">
-						<a class="_viewerExit _windowBarControl" href="#util1" aria-label="Close"></a>
-						<a class="_viewerBack _viewerBarArrow" href="#util1_img3"><img class="_fl" src="./imgs/win/next.png"></a>
-						<a class="_viewerNext _viewerBarArrow" href="#util1_img5"><img src="./imgs/win/next.png"></a>
-					</div>
-					<div id="util1_img5">
-						<img src="./imgs/ScreensaverParticles/screenshot3.png" alt="screenshot" loading="lazy">
-						<a class="_viewerExit _windowBarControl" href="#util1" aria-label="Close"></a>
-						<a class="_viewerBack _viewerBarArrow" href="#util1_img4"><img class="_fl" src="./imgs/win/next.png"></a>
-						<a class="_viewerNext _viewerBarArrow" href="#util1_img6"><img src="./imgs/win/next.png"></a>
-					</div>
-					<div id="util1_img6">
-						<img src="./imgs/ScreensaverParticles/screenshot4.png" alt="screenshot" loading="lazy">
-						<a class="_viewerExit _windowBarControl" href="#util1" aria-label="Close"></a>
-						<a class="_viewerBack _viewerBarArrow" href="#util1_img5"><img class="_fl" src="./imgs/win/next.png"></a>
-						<a class="_viewerNext _viewerBarArrow" href="#util1_img6"><img src="./imgs/win/next.png"></a>
-					</div>
+					<template id="utils_image_template">
+						<div id="util#_img#">
+							<img src="" alt="screenshot" loading="lazy">
+							<a class="_viewerExit _windowBarControl" href="#util#" aria-label="Close"></a>
+							<a class="_viewerBack _viewerBarArrow" href="#util#_img#"><img class="_fl" src="./imgs/win/next.png"></a>
+							<a class="_viewerNext _viewerBarArrow" href="#util#_img#"><img src="./imgs/win/next.png"></a>
+						</div>
+					</template>
+					<script>
+						{
+							const images = [
+								[
+									"./imgs/ScreensaverParticles/screenshot2.png",
+									"./imgs/ScreensaverParticles/screenrecord.gif",
+									"./imgs/ScreensaverParticles/screenshot5.png",
+									"./imgs/ScreensaverParticles/screenrecord2.gif",
+									"./imgs/ScreensaverParticles/screenshot3.png",
+									"./imgs/ScreensaverParticles/screenshot4.png",
+								],
+								[
+									"./imgs/SnowFlakes/screenshot.png",
+									"./imgs/SnowFlakes/screenshot2.png",
+								],
+								[
+									"./imgs/ScreenCapture/capture.png",
+									"./imgs/ScreenCapture/palette.png",
+									"./imgs/ScreenCapture/menu.png",
+									"./imgs/ScreenCapture/settings.png",
+								],
+							]
+							const template = document.getElementById("utils_image_template");
+							const container = template.parentElement;
+							images.forEach((imgs, utilId) => {
+								imgs.forEach((img, i) => {
+									const el = template.content.cloneNode(true);
+									const div = el.querySelector("div");
+									const imgEl = div.querySelector("&>img");
+									const close = div.querySelector("._viewerExit");
+									const prev = div.querySelector("._viewerBack");
+									const next = div.querySelector("._viewerNext");
+
+									const prefix = "util" + (utilId + 1);
+									div.id = prefix + "_img" + (i + 1);
+									imgEl.src = img;
+									close.href = "#" + prefix;
+									prev.href = "#" + prefix + "_img" + Math.max(i, 1);
+									if (i == 0) prev.classList.add("_viewerBarArrowDisabled")
+									next.href = "#" + prefix + "_img" + Math.min(i + 2, imgs.length);
+									if (i == imgs.length - 1) next.classList.add("_viewerBarArrowDisabled")
+
+									container.appendChild(el);
+								});
+							});
+						}
+					</script>
 				</div>
 				<div class="_viewerBar">
 					<div>

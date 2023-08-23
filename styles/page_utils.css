@@ -921,7 +921,7 @@
 	left: 50%;
 	display: flex;
 	flex-direction: column;
-	transform: translate(calc(-50% + var(--tranformFixX)), calc(-50% + var(--tranformFixY)));
+	transform: translate(-50%, -50%);
 	transform-origin: left;
 	scale: 0;
 	width: 100%;
@@ -942,7 +942,7 @@
 .page-utils ._windowProject:has(:target), .page-utils ._windowViewer:has(:target) {
 	opacity: 1;
 	scale: 1;
-	transform: translate(calc(-50% + var(--tranformFixX)), calc(-50% + var(--tranformFixY)));
+	transform: translate(-50%, -50%);
 	pointer-events: initial;
 	transition-delay: 0ms, -350ms;
 }
@@ -1012,14 +1012,18 @@
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 }
-.page-utils ._project div {
+.page-utils ._project q {
 	position: relative;
+	display: block;
 	padding-left: 1em;
 }
-.page-utils ._project div::before {
+.page-utils ._project q::before {
 	content: "> ";
 	position: absolute;
 	left: 0em;
+}
+.page-utils ._project q::after {
+	content: "";
 }
 .page-utils ._project h1::before {
 	content: "## ";
@@ -1027,6 +1031,9 @@
 .page-utils ._project b::before, .page-utils ._project b::after {
 	content: "*";
 	font-weight: 800;
+}
+.page-utils ._project i::before, .page-utils ._project i::after {
+	content: "_";
 }
 .page-utils ._project b {
 	font-weight: 500;
@@ -1037,15 +1044,21 @@
 .page-utils ._project a::after {
 	content: "](" attr(href) ")";
 }
-
-.page-utils ._twoImg {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	max-width: 100%;
+.page-utils ._project ul {
+	list-style: none;
+	padding-left: 0.2em;
 }
-.page-utils ._twoImg img {
-	width: 100%;
-	height: 100%;
+.page-utils ._project ul li::before {
+	content: "*";
+	padding-right: 0.5em;
+	font-weight: bolder;
+	position: relative;
+    top: 0.2em;
+}
+.page-utils ._project ._br {
+	height: 1px;
+	background: repeating-linear-gradient(90deg, black 0px, black 5px, transparent 5px, transparent 7px);
+	margin: 8px 1px;
 }
 
 
@@ -1232,6 +1245,12 @@
 	transform: translateX(24px);
 	z-index: 2;
 	box-sizing: border-box;
+}
+.page-utils ._viewerBarArrowDisabled {
+	filter: grayscale(0.6);
+}
+.page-utils ._viewerBarArrowDisabled::before {
+	filter: saturate(3);
 }
 @media screen and (max-width: 450px) {
 	.page-utils ._viewerBar div > :nth-child(1),
