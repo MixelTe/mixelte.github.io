@@ -13,6 +13,7 @@ let isOpen = false;
 const page_index = document.getElementById("page_index");
 
 const elements = pages.map(id => ({
+	id,
 	page: document.getElementById("page_" + id),
 	marker: document.getElementById("pageMarker_" + id),
 	back: document.querySelectorAll(`#back_${id}`),
@@ -119,7 +120,7 @@ function updateClip()
 			el.size = Math.max(el.size, NormalSize);
 			if (el.size == NormalSize)
 			{
-				el.page.style.zIndex = "1";
+				el.page.style.zIndex = el.id == "games" ? "2" : "1";
 				el.state = States.normal;
 			}
 		}

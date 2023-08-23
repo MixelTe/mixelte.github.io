@@ -5,6 +5,7 @@
 	background-image:  linear-gradient(30deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(150deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(30deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(150deg, #004c47 12%, transparent 12.5%, transparent 87%, #004c47 87.5%, #004c47), linear-gradient(60deg, #004c4777 25%, transparent 22.5%, transparent 75%, #004c4777 75%, #004c4777), linear-gradient(60deg, #004c4777 25%, transparent 22.5%, transparent 75%, #004c4777 75%, #004c4777);
 	background-size: 80px 140px;
 	background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+	z-index: 2;
 }
 /* .page-games .card {
 	--gradient: linear-gradient(45deg, #ffa400 0%, #ef3ff1 100%);

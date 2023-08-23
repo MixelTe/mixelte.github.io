@@ -372,16 +372,19 @@
 							</a>
 						</div>
 						<script>
-							document.querySelectorAll("[data-utils-modDate]").forEach(el => {
-								const repo = el.getAttribute("data-utils-modDate");
-								fetch("https://api.github.com/repos/MixelTe/" + repo)
-								.then(v => v.json())
-								.then(v => {
-									const date = new Date(v.updated_at);
-									const n = n => `${n}`.padStart(2, "0");
-									el.innerText = `${n(date.getDate())}.${n(date.getMonth() + 1)}.${n(date.getFullYear())}`;
-								});
-							})
+							setTimeout(() =>
+								document.querySelectorAll("[data-utils-modDate]").forEach(el => {
+									const repo = el.getAttribute("data-utils-modDate");
+									fetch("https://api.github.com/repos/MixelTe/" + repo)
+									.then(v => v.json())
+									.then(v => {
+										const date = new Date(v.updated_at);
+										const n = n => `${n}`.padStart(2, "0");
+										el.innerText = `${n(date.getDate())}.${n(date.getMonth() + 1)}.${n(date.getFullYear())}`;
+									});
+								})
+								, 1
+							);
 						</script>
 					</div>
 					<div class="_explorerBottom">
