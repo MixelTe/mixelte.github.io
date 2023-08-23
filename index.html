@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="fonts/fonts.css">
 	<link rel="stylesheet" href="styles/card.css">
 	<link rel="stylesheet" href="styles/base.css">
+	<link rel="stylesheet" href="styles/preloader.css">
 	<link rel="stylesheet" href="styles/page_games.css">
 	<link rel="stylesheet" href="styles/page_utils.css">
 	<link rel="stylesheet" href="styles/page_other.css">
@@ -16,6 +17,35 @@
 	<script src="./scripts/langSwitch.js" defer></script>
 </head>
 <body>
+	<div class="preloader">
+		<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			width="1260px" height="400px" viewBox="40 80 1260 400">
+			<path fill="#00000000" stroke="#000000" stroke-width="2" d="M92.65326,413.67697C102.67029,431.43686,109.74721,434.24133,121.63791,436.43018C245.9798,459.31906,319.48154,198.1709,316.3919,123.34927C243.97266,396.48813,299.7698,445.43164,316.38348,452.54938C331.16095,459.89764,348.53995,462.89154,361.97815,452.588C369.4012,446.74548,384.11792,433.39728,411.72775,381.19977C468.2896,283.28387,485.07834,168.75024,492.26584,129.16034C499.45334,89.570435,388.14304,449.00525,500.5755,425.78833"/>
+			<path fill="#00000000" stroke="#000000" stroke-width="2" d="M500.52277,426.41418C622.50055,397.71167,622.08295,316.94888,647.6124,268.7296C601.74207,435.83646,693.63556,404.33218,693.63556,404.33218C727.9967,395.34607,750.1233,351.94925,763.3003,320.5151C787.0069,254.94202,812.3418,255.86859,826.41406,264.3485C850.9062,279.10742,854.6372,336.33185,857.9652,342.81757C872.31665,394.76938,922.063,379.8268,942.3442,370.43567C998.64404,344.36618,1029.8561,326.38852,1049.6049,304.43832C1077.6432,273.2745,1044.7113,252.90964,1017.4066,266.27014C984.6393,282.3036,972.7801,324.72122,975.8489,346.94495C981.40186,387.15884,1045.4612,379.75296,1051.6895,376.94693C1189.4386,354.38193,1205.9174,155.00848,1206.1469,123.34927C1206.5077,73.57663,1184.8926,102.923645,1179.964,115.18744C1137.6471,220.48361,1164.7133,346.94894,1171.3217,355.92233C1178.671,372.9367,1188.663,380.3833,1195.8772,381.4766C1216.809,382.35678,1239.0225,371.84082,1243.5657,353.4706"/>
+			<path fill="#00000000" stroke="#000000" stroke-width="2" d="M801.18634,389.41827C882.69824,267.77643,881.208,261.11935,899.7493,266.47177"/>
+			<path fill="#00000000" stroke="#000000" stroke-width="2" d="M663.1795,238.60553C646.2242,238.60553,632.35175,224.73305,632.35175,207.7778C632.35175,190.82259,646.2242,176.95013,663.1795,176.95013C680.13477,176.95013,694.0072,190.82266,694.0072,207.77791C694.0072,224.73315,680.13477,238.60562,663.1795,238.60553"/>
+		</svg>
+		<div class="preloader_overlay"></div>
+		<script>
+			{
+				const preloader = document.querySelector(".preloader");
+				preloader.addEventListener("click", () => {
+					preloader.parentElement.removeChild(preloader);
+				});
+				setTimeout(() => {
+					preloader.classList.add("preloader_run");
+				}, 1);
+				setTimeout(() => {
+					preloader.classList.add("preloader_hide");
+					const size = Math.max(window.innerWidth, window.innerHeight) * Math.SQRT2;
+					preloader.style.setProperty("--overlay-size", size + "px")
+					setTimeout(() => {
+						preloader.parentElement?.removeChild(preloader);
+					}, 1500);
+				}, 5000);
+			}
+		</script>
+	</div>
 	<div class="page page-index" id="page_index">
 		<div class="content">
 			<h1 class="title card"><div>Welcome to mixelte.<wbr>github.<wbr>io!</div><div></div></h1>
