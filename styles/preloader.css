@@ -48,21 +48,12 @@
 
 .preloader_hide {
 	opacity: 0;
-	transition: opacity 0.5s 1s;
+	transition: opacity 0.5s 1.3s;
 }
 
-.preloader_overlay {
-	position: fixed;
-	left: 50%;
-	top: 50%;
-	width: calc(var(--overlay-size) * 2);
-	height: calc(var(--overlay-size) * 2);
-	transform: translate(-50%, -50%);
-	border-radius: 50%;
-	background: radial-gradient(circle at center, #d0f8fb 0%, #d0f8fb 40%, #110031 73%);
+.preloader_hide svg {
+	transition-property: filter;
 	transition-duration: 1.5s;
 	transition-timing-function: cubic-bezier(0.59, 0.52, 0.27, -0.79);
-}
-.preloader_hide .preloader_overlay {
-	box-shadow: 0 0 40px #110031;
+	filter: drop-shadow(0px 0px 200px rgba(218, 165, 32, 1)) drop-shadow(0px 0px 100px rgba(250, 198, 66, 1)) drop-shadow(0px 0px 40px rgba(250, 198, 66, 1)) drop-shadow(2px 2px 1px goldenrod) drop-shadow(4px 4px 1px goldenrod);
 }
