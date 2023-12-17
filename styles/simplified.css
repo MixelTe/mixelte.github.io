@@ -1,0 +1,64 @@
+.simplified {
+	--c-back: wheat;
+	--c-text: black;
+	--c-link: blue;
+}
+@media (prefers-color-scheme: dark) {
+	.simplified {
+		--c-back: #1e1e1e;
+		--c-text: #d4d4d4;
+		--c-link: #00ffff;
+	}
+}
+
+.open-simplified {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 2rem;
+	height: 2rem;
+	box-sizing: border-box;
+	background-color: #cefff6;
+	border-bottom-right-radius: 0.8rem;
+	box-shadow: inset -4px -4px 6px -1px #aa88fb, 0 0 7px 2px #aa88fb;
+	padding: 0;
+	display: flex;
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+	cursor: pointer;
+	outline: none;
+	transition: transform 150ms;
+	z-index: 5;
+}
+.open-simplified:focus-visible,
+.open-simplified:hover {
+	transform: scale(1.1);
+}
+
+.simplified {
+	width: 100%;
+	min-height: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--c-back);
+	color: var(--c-text);
+}
+
+.simplified-list {
+	display: flex;
+	flex-direction: column;
+	font-size: 1.2rem;
+	margin-bottom: 1.5rem;
+}
+
+.simplified-list a {
+	color: var(--c-link);
+	padding: 0.3em;
+}
+.simplified-list a:hover {
+	text-decoration: underline;
+}

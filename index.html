@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="fonts/fonts.css">
 	<link rel="stylesheet" href="styles/card.css">
 	<link rel="stylesheet" href="styles/base.css">
+	<link rel="stylesheet" href="styles/simplified.css">
 	<link rel="stylesheet" href="styles/preloader.css">
 	<link rel="stylesheet" href="styles/page_games.css">
 	<link rel="stylesheet" href="styles/page_utils.css">
@@ -18,6 +19,11 @@
 	<script defer src="https://metrika.pythonanywhere.com/api/script?app=8JHXYXGF"></script>
 </head>
 <body>
+	<div class="simplified">
+		<h1>All pages</h1>
+		<div class="simplified-list"></div>
+	</div>
+	<script src="scripts/simplified.js"></script>
 	<div class="preloader">
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 			width="1260px" height="400px" viewBox="40 80 1260 400">
@@ -48,6 +54,7 @@
 		</script>
 	</div>
 	<div class="page page-index" id="page_index">
+		<a class="open-simplified" href="?s" title="Simplified view">S</a>
 		<div class="content">
 			<h1 class="title card"><div>Welcome to mixelte.<wbr>github.<wbr>io!</div><div></div></h1>
 		</div>
@@ -592,6 +599,7 @@
 						</div>
 
 						<q><a href="https://github.com/MixelTe/SnowFlakes" target="_blank">Github</a></q>
+						<q><a href="https://mixelte.github.io/SnowFlakes?from=githubio" target="_blank"><span class="en">Download</span><span class="ru">Скачать</span></a></q>
 						<h1 class="en">Screenshots</h1>
 						<h1 class="ru">Скриншоты</h1>
 						<p><a href="#util2_img1">screenshot</a></p>
@@ -599,7 +607,8 @@
 					</div>
 					<div class="_project" id="util3">
 						<h1>Screen Capture</h1>
-						<q><a href="https://github.com/MixelTe/SnowFlakes" target="_blank">Github</a></q>
+						<q><a href="https://github.com/MixelTe/ScreenCapture" target="_blank">Github</a></q>
+						<q><a href="https://mixelte.github.io/ScreenCapture?from=githubio" target="_blank"><span class="en">Download</span><span class="ru">Скачать</span></a></q>
 
 						<div class="en">
 							<p>Capture screen zone and show it as floating topmost window.</p>
