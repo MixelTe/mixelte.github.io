@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /
+Allow: /$
 Allow: /fireworks
 Allow: /learner_ege
 Allow: /mad-maze-game
