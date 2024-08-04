@@ -147,15 +147,15 @@
 						<div class="_description">
 							<div class="_img"><img src="./imgs/HellRun/icon.png" alt="Project logo" loading="lazy"></div>
 							<div>
-								<p class="en">A game in the genre of runner. Published on the platform Yandex Games.</p>
+								<p class="en">A game in the genre of runner. It was originally published on the platform Yandex Games, but they removed it.</p>
 								<p class="en">🎮 The player will have to test his agility and reaction in an endless race.</p>
 								<p class="en">🏆 Leaderboard is implemented for competitive spirit.</p>
-								<p class="ru _nm">Игра в жанре раннер. Опубликованна на платформе Яндекс Игры.</p>
+								<p class="ru _nm">Игра в жанре раннер. Изначально была издана на платформе Яндекс Игры, но они её удалили.</p>
 								<p class="ru">🎮 Игроку предстоит испытать свою ловкость и реакцию в бесконечном забеге.</p>
 								<p class="ru">🏆 Реализован лидерборд для соревновательного духа.</p>
 								<div class="_links">
 									<div>
-										<a href="https://yandex.ru/games/app/225629?from=githubio" target="_blank" rel="noopener noreferrer">
+										<a href="https://mixelte.github.io/HellRun?from=githubio" target="_blank" rel="noopener noreferrer">
 											<img src="./imgs/open-icon-dark.svg" alt="Open">
 										</a>
 										<a href="https://github.com/MixelTe/HellRun" target="_blank" rel="noopener noreferrer">
@@ -251,7 +251,7 @@
 								<p class="en">A homemade implementation of John Conway's game.</p>
 								<p class="en">Drawing, inserting patterns, setting initial conditions, adjusting colors and speed are available</p>
 								<p class="ru _nm">Домашняя реализация игры Джона Конвея.</p>
-								<p class="ru">Доступно рисование, вставка патернов, настройка начальных условий, настройка цветов и скорости</p>
+								<p class="ru">Доступно рисование, вставка шаблонов, настройка начальных условий, настройка цветов и скорости</p>
 								<div class="_links">
 									<div>
 										<a href="https://mixelte.github.io/game-of-life/" target="_blank" rel="noopener noreferrer">
@@ -388,17 +388,27 @@
 								</span>
 								<span data-utils-modDate="ScreenCapture">18.07.2023</span>
 								<span><span class="en">Application</span><span class="ru">Приложение</span></span>
-								<span>127 KB</span>
+								<span>144 KB</span>
 							</a>
 							<a class="_li" href="#util4">
 								<span>
 									<img src="imgs/win/folder.png">
-									<span class="en">Formula Learner</span>
-									<span class="ru">Изучатель формул</span>
+									<span class="en">Learner</span>
+									<span class="ru">ЛЯРО</span>
 								</span>
-								<span data-utils-modDate="physicsLearner">04.02.2022</span>
-								<span><span class="en">Application</span><span class="ru">Приложение</span></span>
+								<span data-utils-modDate="learner">03.02.2024</span>
+								<span><span class="en">Framework</span><span class="ru">Фреймворк</span></span>
 								<span>55 KB</span>
+							</a>
+							<a class="_li" href="#util6">
+								<span>
+									<img src="imgs/win/folder.png">
+									<span class="en">Learner Exam</span>
+									<span class="ru">ЛЯРО ЕГЭ</span>
+								</span>
+								<span data-utils-modDate="learner_ege">03.02.2024</span>
+								<span><span class="en">Web application</span><span class="ru">Веб приложение</span></span>
+								<span>1 440 KB</span>
 							</a>
 							<a class="_li" href="#util5">
 								<span>
@@ -418,6 +428,7 @@
 									fetch("https://api.github.com/repos/MixelTe/" + repo)
 									.then(v => v.json())
 									.then(v => {
+										if (!v.updated_at) return;
 										const date = new Date(v.updated_at);
 										const n = n => `${n}`.padStart(2, "0");
 										el.innerText = `${n(date.getDate())}.${n(date.getMonth() + 1)}.${n(date.getFullYear())}`;
@@ -631,21 +642,89 @@
 						</div>
 					</div>
 					<div class="_project" id="util4">
-						<h1 class="en">Formula Learner</h1>
-						<h1 class="ru">Изучатель формул</h1>
+						<h1 class="en">Learner</h1>
+						<h1 class="ru">ЛЯРО</h1>
 
 						<div class="en">
-							<p>A web application that helps you learn formulas.</p>
-							<p>Can display special symbols for physical formulas.</p>
-							<q><a href="https://github.com/MixelTe/physicsLearner" target="_blank">Github</a></q>
-							<q><a href="https://mixelte.github.io/physicsLearner" target="_blank">Open</a></q>
+							<p>A user-friendly and beautiful web app for learning theory and solving tests.</p>
+							<p>Can display complex formulas.</p>
+							<p>The app is the foundation. It is easy to fill it with your own data.</p>
+							<div class="_br"></div>
+							<p>Возможности:</p>
+							<ul>
+								<li>User-friendly design</li>
+								<li>Theoretical materials</li>
+								<li>Smart system тестов</li>
+								<li>Progress tracking</li>
+							</ul>
+							<q><a href="https://github.com/MixelTe/learner" target="_blank">Github</a></q>
+							<q><a href="https://mixelte.github.io/learner?from=githubio" target="_blank">Open</a></q>
 						</div>
 
 						<div class="ru">
-							<p>Веб-приложение, помогающее изучать формулы.</p>
-							<p>Может отображать спец символы для физических формул</p>
-							<q><a href="https://github.com/MixelTe/physicsLearner" target="_blank">Github</a></q>
-							<q><a href="https://mixelte.github.io/physicsLearner" target="_blank">Открыть</a></q>
+							<p>Удобное и красивое веб-приложение для изучения теории и решения тестов.</p>
+							<p>Может отображать сложные формулы.</p>
+							<p>Приложение является основой. Его легко наполнить собственными данными.</p>
+							<div class="_br"></div>
+							<p>Возможности:</p>
+							<ul>
+								<li>Удобный дизайн</li>
+								<li>Теоретические материалы</li>
+								<li>Умная система тестов</li>
+								<li>Отслеживание прогресса</li>
+							</ul>
+							<q><a href="https://github.com/MixelTe/learner" target="_blank">Github</a></q>
+							<q><a href="https://mixelte.github.io/learner?from=githubio" target="_blank">Открыть</a></q>
+						</div>
+					</div>
+					<div class="_project" id="util6">
+						<h1 class="en">Learner Exam</h1>
+						<h1 class="ru">ЛЯРО ЕГЭ</h1>
+
+						<div class="en">
+							<p>Convenient and beautiful web application for preparing for the Exam.</p>
+							<p>Created based on <a href="#util4">Learner</a>.</p>
+							<div class="_br"></div>
+							<p>Preparing for exams:</p>
+							<ul>
+								<li>Russian</li>
+								<li>Mathematics</li>
+								<li>Physics</li>
+							</ul>
+							<p>Advantages:</p>
+							<ul>
+								<li>User-friendly design</li>
+								<li>Theoretical materials</li>
+								<li>More than 6 thousand assignments</li>
+								<li>Smart test system</li>
+								<li>Progress tracking</li>
+								<li>No registration</li>
+							</ul>
+							<q><a href="https://github.com/MixelTe/learner_ege" target="_blank">Github</a></q>
+							<q><a href="https://mixelte.github.io/learner_ege?from=githubio" target="_blank">Open</a></q>
+						</div>
+
+						<div class="ru">
+							<p>Удобное и красивое веб-приложение для подготовки к ЕГЭ.</p>
+							<p>Создано на основе <a href="#util4">ЛЯРО</a>.</p>
+							<div class="_br"></div>
+							<p>Подготовка к экзаменам:</p>
+							<ul>
+								<li>Русский</li>
+								<li>Математика</li>
+								<li>Физика</li>
+							</ul>
+							<p>Преимущества:</p>
+							<ul>
+								<li>Удобный дизайн</li>
+								<li>Теоретические материалы</li>
+								<li>Более 6-ти тысяч заданий</li>
+								<li>Умная система тестов</li>
+								<li>Отслеживание прогресса</li>
+								<li>Без регистрации</li>
+							</ul>
+							<q><a href="https://github.com/MixelTe/learner_ege" target="_blank">Github</a></q>
+							<q><a href="https://mixelte.github.io/learner_ege?from=githubio" target="_blank">Открыть</a></q>
 						</div>
 					</div>
 					<div class="_project" id="util5">
@@ -854,6 +933,27 @@
 			</div>
 			<h1 class="title card"><div><img id="back_other" src="./imgs/arrow_back.png" alt="Back">Other<button id="langSwitch"></button></div><div></div></h1>
 			<div class="_projects">
+				<div class="card"><div>
+					<div class="_img">
+						<img src="./imgs/fireworks.png">
+					</div>
+					<div class="_cardBody">
+						<h1>
+							<span class="en">Fireworks</span>
+							<span class="ru">Фейерверки</span>
+							<span>
+								<a href="https://mixelte.github.io/fireworks?from=githubio" target="_blank" rel="noopener noreferrer">
+									<img src="./imgs/open-icon-dark.svg" alt="Open">
+								</a>
+								<a href="https://github.com/MixelTe/fireworks" target="_blank" rel="noopener noreferrer">
+									<img src="./imgs/github-icon-dark.png" alt="Github">
+								</a>
+							</span>
+						</h1>
+						<p class="en">A program that draws any picture using successive weaves of threads in a circle.</p>
+						<p class="ru">Красивое поздравление с Новым Годом.</p>
+					</div>
+				</div><div></div></div>
 				<div class="card"><div>
 					<div class="_img">
 						<img src="./imgs/stringArt.png">
