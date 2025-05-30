@@ -4,7 +4,9 @@ Allow: /$
 Allow: /fireworks
 Allow: /learner_ege
 Allow: /mad-maze-game
+Allow: /neuralNetwork
 Allow: /pages/html-css-js
+Allow: /Realmleaper/v1/
 Allow: /ScreenCapture
 Allow: /SnowFlakes
 Allow: /stringArt
