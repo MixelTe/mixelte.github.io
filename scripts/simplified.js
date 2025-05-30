@@ -31,7 +31,10 @@
 			],
 			"TextStoryGame": [
 				["Text Story Game / Editor", "https://mixelte.github.io/TextStoryGame/questEditor"]
-			]
+			],
+			"Realmleaper": [
+				["Realmleaper / V1", "https://mixelte.github.io/Realmleaper/v1"]
+			],
 		}
 		const list = el.querySelector(".simplified-list");
 		list.appendChild(Div("Loading"))
