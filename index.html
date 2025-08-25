@@ -38,6 +38,7 @@
 			let markerAnimEnabled = false;
 			{
 				const preloader = document.querySelector(".preloader");
+						preloader.parentElement?.removeChild(preloader);
 				preloader.addEventListener("click", () => {
 					preloader.parentElement.removeChild(preloader);
 					markerAnimEnabled = true;
@@ -69,6 +70,7 @@
 				<div class="_switch">
 					<a href="#game1" class="oldpaper _gold">The Legend <br> of Pirate</a>
 					<a href="#game2" class="oldpaper _gold">Hell Run</a>
+					<a href="#game6" class="oldpaper">Realmleaper</a>
 					<a href="#game3" class="oldpaper">Vertik</a>
 					<a href="#game4" class="oldpaper">Mad Maze</a>
 					<a href="#game5" class="oldpaper">Game of Life</a>
@@ -266,6 +268,50 @@
 						</div>
 						<div class="_br"></div>
 					</div>
+					<div class="_card" id="game6">
+						<div class="_header">
+							<div>Realmleaper</div>
+							<div>22.03.2025</div>
+						</div>
+						<div class="_description">
+							<div class="_img"><img src="./imgs/Realmleaper/logo.png" alt="Project logo" loading="lazy"></div>
+							<div>
+								<p class="en">A space-themed game where the player must fight off enemies. The main idea of the game is based on mechanics that warp space and time, for example:</p>
+								<ul class="en">
+									<li>Stopping time</li>
+									<li>Expanding space, distancing enemies from the player</li>
+									<li>Curving space, changing the trajectory of movement</li>
+								</ul>
+								<p class="ru _nm">Игра в космической стилистике, где игроку предстоит отбиваться от противников. Основной идеей игры являются механики по искажению пространства и времени, например:</p>
+								<ul class="ru">
+									<li>Остановка времени</li>
+									<li>Расширение пространства, отдаляя противников от игрока</li>
+									<li>Искривление пространства, меняя траекторию движения</li>
+								</ul>
+								<div class="_links">
+									<div>
+										<a href="https://mixelte.github.io/Realmleaper/v1" target="_blank" rel="noopener noreferrer">
+											<img src="./imgs/open-icon-dark.svg" alt="Open">
+										</a>
+										<a href="https://github.com/kilobit0/igrovar2025" target="_blank" rel="noopener noreferrer">
+											<!-- <img src="./imgs/github-icon-dark.png" alt="Github"> -->
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="_br"></div>
+						<div class="_largeDescription">
+							<div class="_descriptionImg">
+								<div class="_img2 _img2-lg">
+									<video src="./imgs/Realmleaper/gameplay_v1.mp4" autoplay muted loop />
+								</div>
+								<p class="en _nm">The game assumes coordinated action between opponents. For example, there is a defensive ship that creates a time-slowing field around allies.</p>
+								<p class="ru _nm">В игре предполагается согласованная работа противников, так например, реализован защитный корабль, создающий поле замедления времени вокруг союзников</p>
+							</div>
+						</div>
+						<div class="_br"></div>
+					</div>
 				</div>
 				<div class="_folder" id="getdate">
 					<div>The Best</div>
@@ -273,7 +319,7 @@
 					<div></div>
 					<div></div>
 					<div>\_(0_0)_/</div>
-					<div><span>&copy;</span> Mixel Te, 2023</div>
+					<div><span>&copy;</span> Mixel Te, 2025</div>
 				</div>
 				<script>
 					{
@@ -419,6 +465,16 @@
 								<span data-utils-modDate="RecipeBook">10.04.2022</span>
 								<span><span class="en">Web application</span><span class="ru">Веб приложение</span></span>
 								<span>10 325 KB</span>
+							</a>
+							<a class="_li" href="#util7">
+								<span>
+									<img src="imgs/win/folder.png">
+									<span class="en">Aether</span>
+									<span class="ru">Aether</span>
+								</span>
+								<span data-utils-modDate="aether">28.07.2025</span>
+								<span><span class="en">Http tunel</span><span class="ru">Http tunel</span></span>
+								<span>8 807 KB</span>
 							</a>
 						</div>
 						<script>
@@ -570,14 +626,16 @@
 						</div>
 
 						<q><a href="https://github.com/MixelTe/ScreensaverParticles" target="_blank">Github</a></q>
+						<q><a href="https://mixelte.github.io/ScreensaverParticles?from=githubio" target="_blank"><span class="en">Download</span><span class="ru">Скачать</span></a></q>
 						<h1 class="en">Screenshots</h1>
 						<h1 class="ru">Скриншоты</h1>
-						<p><a href="#util1_img1">screenshot</a></p>
-						<p><a href="#util1_img2">screenrecord</a></p>
-						<p><a href="#util1_img3">screenshot2</a></p>
-						<p><a href="#util1_img4">screenrecord2</a></p>
-						<p><a href="#util1_img5">screenshot3</a></p>
-						<p><a href="#util1_img6">screenshot4</a></p>
+						<p><a href="#util1_img1">demo</a></p>
+						<p><a href="#util1_img2">screenshot</a></p>
+						<p><a href="#util1_img3">screenrecord</a></p>
+						<p><a href="#util1_img4">screenshot2</a></p>
+						<p><a href="#util1_img5">screenrecord2</a></p>
+						<p><a href="#util1_img6">screenshot3</a></p>
+						<p><a href="#util1_img7">screenshot4</a></p>
 					</div>
 					<div class="_project" id="util2">
 						<h1 class="en">SnowFlakes</h1>
@@ -588,6 +646,7 @@
 							<p>By moving the mouse, you can <i>blow</i> the snowflakes away.</p>
 							<p>Snowflakes fall on top of everything <b>without disturbing</b> anything.</p>
 							<p>Over time, <b>snowdrifts</b> appear, which you can <i>shovel</i> with the mouse. (Can be turned off).</p>
+							<p>A <b>Christmas lights</b> are flashing around the edges of the screen, with 5 modes available. (Can be turned off)</p>
 							<p>You can select any picture for snowflakes.</p>
 							<p>You can select an area where snowflakes will not be visible.</p>
 							<ul>
@@ -602,6 +661,7 @@
 							<p>Двигая мышку, можно <i>сдувать</i> снежинки.</p>
 							<p>Снежинки падают поверх всего, ничему <b>не мешая</b>.</p>
 							<p>Со временем появляются <b>сугробы</b>, которые можно <i>разгребать</i> мышкой. (Можно отключить)</p>
+							<p>По краям экрана мигает <b>гирлянда</b>, есть 5 режимов. (Можно отключить)</p>
 							<p>Для снежинок можно выбрать любую картинку.</p>
 							<p>Можно выделить область, где не будет видно снежинок.</p>
 							<ul>
@@ -615,8 +675,9 @@
 						<q><a href="https://mixelte.github.io/SnowFlakes?from=githubio" target="_blank"><span class="en">Download</span><span class="ru">Скачать</span></a></q>
 						<h1 class="en">Screenshots</h1>
 						<h1 class="ru">Скриншоты</h1>
-						<p><a href="#util2_img1">screenshot</a></p>
-						<p><a href="#util2_img2">screenshot2</a></p>
+						<p><a href="#util2_img1">demo</a></p>
+						<p><a href="#util2_img2">screenshot</a></p>
+						<p><a href="#util2_img3">screenshot2</a></p>
 					</div>
 					<div class="_project" id="util3">
 						<h1>Screen Capture</h1>
@@ -741,6 +802,18 @@
 							<q><a href="https://mixel.pythonanywhere.com" target="_blank">Открыть</a></q>
 						</div>
 					</div>
+					<div class="_project" id="util7">
+						<h1 class="en">Aether</h1>
+						<h1 class="ru">Aether</h1>
+						<div class="en">
+							<p>Reverse tunneling app written on Go. Supports only http requests</p>
+							<q><a href="https://github.com/MixelTe/aether" target="_blank">Github</a></q>
+						</div>
+						<div class="ru">
+							<p>Reverse tunneling app written on Go. Supports only http requests</p>
+							<q><a href="https://github.com/MixelTe/aether" target="_blank">Github</a></q>
+						</div>
+					</div>
 				</div>
 				<div class="_statusBar">
 					<div><span class="en">Ln 3, Col 37</span><span class="ru">Стр 3, стлб 37</span></div>
@@ -782,6 +855,7 @@
 						{
 							const images = [
 								[
+									"./imgs/ScreensaverParticles/demo.gif",
 									"./imgs/ScreensaverParticles/screenshot2.png",
 									"./imgs/ScreensaverParticles/screenrecord.gif",
 									"./imgs/ScreensaverParticles/screenshot5.png",
@@ -790,6 +864,7 @@
 									"./imgs/ScreensaverParticles/screenshot4.png",
 								],
 								[
+									"./imgs/SnowFlakes/demo.mp4",
 									"./imgs/SnowFlakes/screenshot.png",
 									"./imgs/SnowFlakes/screenshot2.png",
 								],
@@ -814,6 +889,15 @@
 									const prefix = "util" + (utilId + 1);
 									div.id = prefix + "_img" + (i + 1);
 									imgEl.src = img;
+									if (img.endsWith(".mp4")) {
+										const video = document.createElement("video");
+										div.insertBefore(video, imgEl);
+										div.removeChild(imgEl);
+										video.src = img;
+										video.autoplay = true;
+										video.muted = true;
+										video.loop = true;
+									}
 									close.href = "#" + prefix;
 									prev.href = "#" + prefix + "_img" + Math.max(i, 1);
 									if (i == 0) prev.classList.add("_viewerBarArrowDisabled")
@@ -935,7 +1019,7 @@
 			<div class="_projects">
 				<div class="card"><div>
 					<div class="_img">
-						<img src="./imgs/fireworks.png">
+						<img src="./imgs/fireworks.png" loading="lazy">
 					</div>
 					<div class="_cardBody">
 						<h1>
@@ -956,7 +1040,7 @@
 				</div><div></div></div>
 				<div class="card"><div>
 					<div class="_img">
-						<img src="./imgs/stringArt.png">
+						<img src="./imgs/stringArt.png" loading="lazy">
 					</div>
 					<div class="_cardBody">
 						<h1>
@@ -976,7 +1060,27 @@
 				</div><div></div></div>
 				<div class="card"><div>
 					<div class="_img">
-						<img src="./imgs/cube.png">
+						<video src="./imgs/neuralNetwork.mp4" autoplay muted loop style="filter: brightness(2) contrast(2);">
+					</div>
+					<div class="_cardBody">
+						<h1>
+							<span>Neural Network</span>
+							<span>
+								<a href="https://mixelte.github.io/neuralNetwork?from=githubio" target="_blank" rel="noopener noreferrer">
+									<img src="./imgs/open-icon-dark.svg" alt="Open">
+								</a>
+								<a href="https://github.com/MixelTe/neuralNetwork" target="_blank" rel="noopener noreferrer">
+									<img src="./imgs/github-icon-dark.png" alt="Github">
+								</a>
+							</span>
+						</h1>
+						<p class="en">Interactive visualizer of simple neural network.</p>
+						<p class="ru">Интерактивная визуализация работы простой нейросети.</p>
+					</div>
+				</div><div></div></div>
+				<div class="card"><div>
+					<div class="_img">
+						<img src="./imgs/cube.png" loading="lazy">
 					</div>
 					<div class="_cardBody">
 						<h1>
@@ -997,7 +1101,7 @@
 				</div><div></div></div>
 				<div class="card"><div>
 					<div class="_img">
-						<img src="./imgs/own_project.jpg">
+						<img src="./imgs/own_project.jpg" loading="lazy">
 					</div>
 					<div class="_cardBody">
 						<h1>

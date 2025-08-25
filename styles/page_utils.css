@@ -1080,6 +1080,7 @@
 .page-utils ._windowViewer ._windowBody div:target {
 	display: flex;
 }
+.page-utils ._windowViewer ._windowBody video,
 .page-utils ._windowViewer ._windowBody img {
 	max-width: 100%;
 	max-height: 100%;
@@ -1091,14 +1092,17 @@
 	height: var(--img-height);
 	width: var(--img-width);
 }
+.page-utils ._windowViewer ._windowBody[data-img-rotation="1"] div > video,
 .page-utils ._windowViewer ._windowBody[data-img-rotation="1"] div > img {
 	transform: rotate(90deg);
 	max-width: var(--img-height);
 	max-height: var(--img-width);
 }
+.page-utils ._windowViewer ._windowBody[data-img-rotation="2"] div > video,
 .page-utils ._windowViewer ._windowBody[data-img-rotation="2"] div > img {
 	transform: rotate(180deg);
 }
+.page-utils ._windowViewer ._windowBody[data-img-rotation="3"] div > video,
 .page-utils ._windowViewer ._windowBody[data-img-rotation="3"] div > img {
 	transform: rotate(-90deg);
 	max-width: var(--img-height);

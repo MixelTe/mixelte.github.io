@@ -35,11 +35,15 @@
 			"Realmleaper": [
 				["Realmleaper / V1", "https://mixelte.github.io/Realmleaper/v1"]
 			],
+			"morze": [
+				["morze / 2", "https://mixelte.github.io/morze/2"]
+			],
 		}
 		const list = el.querySelector(".simplified-list");
 		list.appendChild(Div("Loading"))
-		const repos = await (await fetch("https://api.github.com/users/mixelte/repos?per_page=200")).json();
-		list.innerHTML = "";
+		const r = await fetch("https://api.github.com/users/mixelte/repos?per_page=200")
+		const repos = await (r).json();
+		list.innerHTML = r.status == 403 ? "API rate limit exceeded" : "";
 		for (const repo of repos)
 		{
 			if (!repo.has_pages) continue;

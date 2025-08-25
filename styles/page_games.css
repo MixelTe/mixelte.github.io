@@ -78,7 +78,7 @@
 	writing-mode: vertical-rl;
 	text-orientation: mixed;
 	text-decoration: none;
-	padding: 0.5em 1em;
+	padding: 0.5em 0.8em;
 	padding-bottom: 2em;
 	--size: 50px;
 	font-size: 2rem;
@@ -104,7 +104,7 @@
 }
 @media screen and (max-width: 650px) {
 	.page-games ._switch .oldpaper {
-		padding: 0.5em calc(100vw / 25);
+		padding: 0.5em calc(100vw / 35);
 		padding-bottom: 2em;
 	}
 }
@@ -389,6 +389,11 @@
 .page-games ._nm {
 	margin: 0;
 }
+.page-games ul {
+	margin: 0;
+	margin-top: 0.5em;
+	padding-left: 0.75em;
+}
 
 .page-games ._br {
 	height: 4px;
@@ -444,6 +449,7 @@
 	width: 10em;
 	height: 10em;
 }
+.page-games ._img2 video,
 .page-games ._img2 img {
 	height: 100%;
 	width: 100%;

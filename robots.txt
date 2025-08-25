@@ -8,6 +8,7 @@ Allow: /neuralNetwork
 Allow: /pages/html-css-js
 Allow: /Realmleaper/v1/
 Allow: /ScreenCapture
+Allow: /ScreensaverParticles
 Allow: /SnowFlakes
 Allow: /stringArt
 Allow: /The-Legend-of-Pirate
