@@ -44,7 +44,7 @@ function animate()
 			}
 
 			el.pos.y -= page_index.scrollTop;
-			el.page.scrollTop = page_index.scrollTop;
+			// el.page.scrollTop = page_index.scrollTop;
 
 			el.marker.style.top = `${el.pos.y}px`;
 			el.marker.style.left = `${el.pos.x}px`;

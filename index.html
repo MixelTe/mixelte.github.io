@@ -18,7 +18,6 @@
 	<script src="./scripts/pageSwitch.js" defer></script>
 	<script src="./scripts/markerAnim.js" defer></script>
 	<script src="./scripts/langSwitch.js" defer></script>
-	<script defer src="https://metrika.pythonanywhere.com/api/script?app=8JHXYXGF"></script>
 </head>
 <body>
 	<div class="simplified">
@@ -38,7 +37,6 @@
 			let markerAnimEnabled = false;
 			{
 				const preloader = document.querySelector(".preloader");
-						preloader.parentElement?.removeChild(preloader);
 				preloader.addEventListener("click", () => {
 					preloader.parentElement.removeChild(preloader);
 					markerAnimEnabled = true;
