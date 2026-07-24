@@ -471,7 +471,7 @@
 									<span class="ru">Aether</span>
 								</span>
 								<span data-utils-modDate="aether">28.07.2025</span>
-								<span><span class="en">Http tunel</span><span class="ru">Http tunel</span></span>
+								<span><span class="en">HTTP Reverse Proxy</span><span class="ru">HTTP Reverse Proxy</span></span>
 								<span>8 807 KB</span>
 							</a>
 						</div>
@@ -494,8 +494,16 @@
 					</div>
 					<div class="_explorerBottom">
 						<img src="./imgs/win/folder_lg.png">
-						<div><span class="en">5 items</span><span class="ru">Элементов: 5</span></div>
+						<div><span class="en"><span class="_explorerBottom__itemCount">5</span> items</span><span class="ru">Элементов: <span class="_explorerBottom__itemCount">5</span></span></div>
 					</div>
+					<script>
+						{
+							const count = document.querySelectorAll("._windowBody_explorer ._projects > ._li").length;
+							document.querySelectorAll("._explorerBottom__itemCount").forEach(el => {
+								el.innerText = count;
+							});
+						}
+					</script>
 				</div>
 			</div>
 			<div class="_window _windowProject">
@@ -636,37 +644,39 @@
 						<p><a href="#util1_img7">screenshot4</a></p>
 					</div>
 					<div class="_project" id="util2">
-						<h1 class="en">SnowFlakes</h1>
-						<h1 class="ru">Снежинки</h1>
+						<h1 class="en">❄️ SnowFlakes</h1>
+						<h1 class="ru">❄️ Снежинки</h1>
 
 						<div class="en">
 							<p>Draws <b>snowflakes</b> falling over the screen.</p>
-							<p>By moving the mouse, you can <i>blow</i> the snowflakes away.</p>
+							<p>🧹 By moving the mouse, you can <i>blow</i> the snowflakes away.</p>
 							<p>Snowflakes fall on top of everything <b>without disturbing</b> anything.</p>
-							<p>Over time, <b>snowdrifts</b> appear, which you can <i>shovel</i> with the mouse. (Can be turned off).</p>
-							<p>A <b>Christmas lights</b> are flashing around the edges of the screen, with 5 modes available. (Can be turned off)</p>
+							<p>☃️ Over time, <b>snowdrifts</b> appear, which you can <i>shovel</i> with the mouse. (Can be turned off).</p>
+                            <p>There are two types of snowdrifts: on the taskbar and on windows. When a window moves, the snowdrift breaks apart back into snowflakes. The particles in the snowdrift have <b>physics</b> - they can roll from one window to another.</p>
+							<p>🎄 A <b>Christmas lights</b> are flashing around the edges of the screen, with 5 modes available. (Can be turned off)</p>
 							<p>You can select any picture for snowflakes.</p>
 							<p>You can select an area where snowflakes will not be visible.</p>
 							<ul>
 								<li>Click on the icon -> Select area</li>
 								<li>Double click on the icon -> Clear area.</li>
 							</ul>
-							<p>Many parameters <b>can be customized</b> in the menu.</p>
+							<p>⚙️ Many parameters <b>can be customized</b> in the menu.</p>
 						</div>
 
 						<div class="ru">
 							<p>Рисует <b>снежинки</b>, падающие поверх экрана.</p>
-							<p>Двигая мышку, можно <i>сдувать</i> снежинки.</p>
+							<p>🧹 Двигая мышку, можно <i>сдувать</i> снежинки.</p>
 							<p>Снежинки падают поверх всего, ничему <b>не мешая</b>.</p>
-							<p>Со временем появляются <b>сугробы</b>, которые можно <i>разгребать</i> мышкой. (Можно отключить)</p>
-							<p>По краям экрана мигает <b>гирлянда</b>, есть 5 режимов. (Можно отключить)</p>
+							<p>☃️ Со временем появляются <b>сугробы</b>, которые можно <i>разгребать</i> мышкой. (Можно отключить)</p>
+							<p>Два типа сугробов: на панели задач и на окнах. При движении окна сугроб разлетается обратно на снежинки. У частичек сугроба есть <b>физика</b> - может скатиться с одного окна на другое.</p>
+							<p>🎄 По краям экрана мигает <b>гирлянда</b>, есть 5 режимов. (Можно отключить)</p>
 							<p>Для снежинок можно выбрать любую картинку.</p>
 							<p>Можно выделить область, где не будет видно снежинок.</p>
 							<ul>
 								<li>ЛКМ по иконке -> Выделение области</li>
 								<li>Двойной ЛКМ по иконке -> Очистить область</li>
 							</ul>
-							<p>Множество параметров <b>можно настроить</b> в меню.</p>
+							<p>⚙️ Множество параметров <b>можно настроить</b> в меню.</p>
 						</div>
 
 						<q><a href="https://github.com/MixelTe/SnowFlakes" target="_blank">Github</a></q>
@@ -674,6 +684,7 @@
 						<h1 class="en">Screenshots</h1>
 						<h1 class="ru">Скриншоты</h1>
 						<p><a href="#util2_img1">demo</a></p>
+						<p><a href="#util2_img4">record</a></p>
 						<p><a href="#util2_img2">screenshot</a></p>
 						<p><a href="#util2_img3">screenshot2</a></p>
 					</div>
@@ -865,6 +876,7 @@
 									"./imgs/SnowFlakes/demo.mp4",
 									"./imgs/SnowFlakes/screenshot.png",
 									"./imgs/SnowFlakes/screenshot2.png",
+									"./imgs/SnowFlakes/record.mp4",
 								],
 								[
 									"./imgs/ScreenCapture/capture.png",
@@ -998,9 +1010,13 @@
 					const d = new Date();
 					const toTwo = v => v < 10 ? `0${v}` : `${v}`;
 					const el1 = document.querySelector("._controlBtnDate :first-child");
-					el1.innerText = `${toTwo(d.getHours())}:${toTwo(d.getMinutes())}`
 					const el2 = document.querySelector("._controlBtnDate :last-child");
-					el2.innerText = `${toTwo(d.getDate())}.${toTwo(d.getMonth() + 1)}.${d.getFullYear()}`
+					function upd() {
+						el1.innerText = `${toTwo(d.getHours())}:${toTwo(d.getMinutes())}`;
+						el2.innerText = `${toTwo(d.getDate())}.${toTwo(d.getMonth() + 1)}.${d.getFullYear()}`;
+					}
+					upd();
+					setInterval(upd, 5000);
 				}
 			</script>
 		</div>
