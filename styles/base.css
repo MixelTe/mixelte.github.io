@@ -11,6 +11,20 @@ body {
 	font-family: "PT Sans", Arial, Helvetica, sans-serif;
 }
 
+@font-face {
+	font-family: 'runicsly';
+	src: url(../runicsly.ttf);
+	font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.runicsly {
+	font-family: 'runicsly', Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.runicsly_imp * {
+	font-family: 'runicsly', Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
 a {
 	text-decoration: none;
 	text-decoration-skip-ink: none;

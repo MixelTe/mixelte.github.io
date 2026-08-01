@@ -557,6 +557,13 @@
 	display: flex;
 	align-items: center;
 	gap: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.page-utils ._projects ._li > span span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 .page-utils ._projects ._li > span:last-child {
 	justify-content: end;
@@ -1034,6 +1041,13 @@
 }
 .page-utils ._project i::before, .page-utils ._project i::after {
 	content: "_";
+}
+.page-utils ._project code {
+    background-color: #0001;
+    border-radius: 0.3em;
+}
+.page-utils ._project code::before, .page-utils ._project code::after {
+	content: "`";
 }
 .page-utils ._project b {
 	font-weight: 500;
